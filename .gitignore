@@ -1,0 +1,6 @@
+*.docx
+*.doc
+*.pdf
+propuesta*
+prompt-diseno-referencia.md
+.htaccess

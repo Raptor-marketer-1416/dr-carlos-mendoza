@@ -254,9 +254,9 @@ h1, h2, h3, h4, h5 {
 
 /* Logo imagen */
 .logo-img {
-  height: 48px;
+  height: 96px;
   width: auto;
-  max-width: 200px;
+  max-width: 400px;
   display: block;
   object-fit: contain;
 }

@@ -2247,6 +2247,94 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* ==========================================
+   SECCIÓN DOCTOR INTRO — HOME
+   ========================================== */
+
+.doctor-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.doctor-photo-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(13,33,55,0.15);
+}
+
+.doctor-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.doctor-intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.doctor-intro-text {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.25rem;
+}
+
+.doctor-intro-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.doctor-highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.doctor-highlight svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .doctor-intro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .doctor-photo-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================
+   PÁGINAS LEGALES
+   ========================================== */
+
+.legal-content {
+  padding: var(--space-md) 0 var(--space-xl);
+}
+
+.legal-content h2 {
+  margin-top: var(--space-md);
+}
+
+.legal-content h3 {
+  font-size: var(--text-base);
+  margin-top: var(--space-sm);
+}
+
 /* Alert box */
 .alert-box {
   border-radius: var(--radius-md);

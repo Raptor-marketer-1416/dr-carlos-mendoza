@@ -76,4 +76,19 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- LEGAL -->
+  <url>
+    <loc>https://neurocirujanoqueretaro.com/aviso-de-privacidad/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://neurocirujanoqueretaro.com/terminos-y-condiciones/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
 </urlset>

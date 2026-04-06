@@ -1279,6 +1279,10 @@ h1, h2, h3, h4, h5 {
   color: rgba(255,255,255,0.3);
 }
 
+.footer-raptor-link {
+  color: var(--color-accent);
+}
+
 .footer-legal {
   display: flex;
   gap: 1.25rem;

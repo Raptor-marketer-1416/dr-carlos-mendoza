@@ -1175,6 +1175,13 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 1.25rem;
 }
 
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
 .footer-desc {
   font-size: var(--text-sm);
   color: rgba(255,255,255,0.45);

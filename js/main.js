@@ -180,7 +180,70 @@ function initActiveNav() {
 }
 
 // ================================================
-// 8. INICIALIZACIÓN
+// 8. BOTONES DE CONVERSIÓN (WhatsApp + Llamada)
+// ================================================
+function initConversionButtons() {
+
+  // ── WHATSAPP ────────────────────────────
+  const waModal = document.getElementById('wa-modal');
+  const waForm = document.getElementById('wa-form');
+  const openWaBtns = document.querySelectorAll('.open-wa-modal');
+  const waCloseBtn = document.querySelector('.wa-modal-close');
+
+  const openWaModal = () => { waModal?.classList.add('active'); document.body.style.overflow = 'hidden'; };
+  const closeWaModal = () => { waModal?.classList.remove('active'); document.body.style.overflow = ''; };
+
+  openWaBtns.forEach(btn => btn.addEventListener('click', openWaModal));
+  if (waCloseBtn) waCloseBtn.addEventListener('click', closeWaModal);
+  waModal?.addEventListener('click', e => { if (e.target === waModal) closeWaModal(); });
+
+  waForm?.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('wa-name').value;
+    const service = document.getElementById('wa-service').value;
+
+    // Tracking GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'event': 'whatsapp_lead', 'lead_name': name, 'lead_service': service });
+    window.dataLayer.push({ 'event': 'user_data_capture', 'user_data': { 'address': { 'first_name': name } } });
+
+    const message = `Hola Dr. Carlos Mendoza, soy ${name}. Me interesa: ${service}.`;
+    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
+    closeWaModal();
+    waForm.reset();
+  });
+
+  // ── LLAMADA ─────────────────────────────
+  const callModal = document.getElementById('call-modal');
+  const confirmCallBtn = document.getElementById('confirm-call-btn');
+  const cancelCallBtn = document.getElementById('cancel-call-btn');
+  const callTriggers = document.querySelectorAll('.floating-call-btn');
+
+  const openCallModal = e => { e.preventDefault(); callModal?.classList.add('active'); document.body.style.overflow = 'hidden'; };
+  const closeCallModal = () => { callModal?.classList.remove('active'); document.body.style.overflow = ''; };
+
+  callTriggers.forEach(t => t.addEventListener('click', openCallModal));
+  cancelCallBtn?.addEventListener('click', closeCallModal);
+  callModal?.addEventListener('click', e => { if (e.target === callModal) closeCallModal(); });
+
+  confirmCallBtn?.addEventListener('click', () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'event': 'call_confirmed', 'destination_number': '+52' + CONFIG.phone });
+    window.location.href = 'tel:+52' + CONFIG.phone;
+    closeCallModal();
+  });
+
+  // Cerrar modales con ESC
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeWaModal();
+      closeCallModal();
+    }
+  });
+}
+
+// ================================================
+// 9. INICIALIZACIÓN
 // ================================================
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
@@ -189,4 +252,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initFAQ();
   initActiveNav();
+  initConversionButtons();
 });

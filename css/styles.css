@@ -1832,6 +1832,11 @@ h1, h2, h3, h4, h5 {
     --space-lg: 2.5rem;
   }
 
+  /* Ocultar el tag de ubicación sobre el H1 del hero en móvil */
+  .hero-tag {
+    display: none;
+  }
+
   .nav-menu {
     position: fixed;
     top: 0;

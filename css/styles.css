@@ -238,6 +238,17 @@ h1, h2, h3, h4, h5 {
   padding: 0.65rem 0;
 }
 
+/* Header transparente sobre hero con video */
+.header--transparent {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.header--transparent.scrolled {
+  background: var(--color-primary);
+  backdrop-filter: blur(8px);
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -367,6 +378,58 @@ h1, h2, h3, h4, h5 {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
   align-items: center;
+}
+
+/* Hero con video de fondo */
+.hero--video {
+  background: var(--color-bg-dark);
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(180deg, rgba(13,33,55,0.55) 0%, rgba(13,33,55,0.72) 60%, rgba(13,33,55,0.88) 100%),
+    radial-gradient(at 70% 30%, hsla(196,100%,38%,0.15) 0px, transparent 55%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero--video .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero--video .hero-grid {
+  grid-template-columns: 1fr;
+  max-width: 860px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero--video .hero-tag,
+.hero--video .hero-actions,
+.hero--video .hero-trust {
+  justify-content: center;
+}
+
+.hero--video .hero-subtitle {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-tag {

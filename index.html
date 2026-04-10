@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Neurocirujano en Querétaro | Dr. Carlos Mendoza">
   <meta name="twitter:description" content="Especialista en columna vertebral. Mínima invasión. Hospital H+ y Newrospine.">
 
-  <link rel="stylesheet" href="./css/styles.css?v=2">
+  <link rel="stylesheet" href="./css/styles.css?v=3">
   <link rel="icon" href="./img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <!-- Schema JSON-LD Global (Physician) -->
@@ -161,7 +161,7 @@
   <!-- ==============================
        HEADER
        ============================== -->
-  <header class="header" id="header">
+  <header class="header header--transparent" id="header">
     <nav class="nav container" aria-label="Navegación principal">
       <a href="./" class="nav-logo" aria-label="Dr. Carlos Mendoza — Inicio">
         <div class="nav-logo-text">
@@ -187,7 +187,14 @@
     <!-- ==============================
          HERO
          ============================== -->
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero hero--video" aria-labelledby="hero-heading">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto"
+             poster="./img/hero-poster-neurocirujano-queretaro.jpg"
+             aria-hidden="true">
+        <source src="./video/neurocirujano-queretaro-dr-carlos-mendoza.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-content">
           <span class="hero-tag">Querétaro · Hospital H+ · Newrospine</span>
@@ -228,36 +235,6 @@
           </div>
         </div>
 
-        <!-- Decoración visual (reemplazar con foto cuando esté lista) -->
-        <div class="hero-visual" aria-hidden="true">
-          <svg class="hero-deco" viewBox="0 0 400 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Vértebras abstractas -->
-            <ellipse cx="200" cy="90"  rx="65" ry="42" stroke="#00C2A8" stroke-width="2"   fill="rgba(0,194,168,0.06)" opacity="0.9"/>
-            <ellipse cx="200" cy="185" rx="65" ry="42" stroke="#00C2A8" stroke-width="2"   fill="rgba(0,194,168,0.06)" opacity="0.75"/>
-            <ellipse cx="200" cy="280" rx="65" ry="42" stroke="#00C2A8" stroke-width="2"   fill="rgba(0,194,168,0.06)" opacity="0.6"/>
-            <ellipse cx="200" cy="375" rx="65" ry="42" stroke="#00C2A8" stroke-width="2"   fill="rgba(0,194,168,0.06)" opacity="0.45"/>
-            <ellipse cx="200" cy="465" rx="55" ry="35" stroke="#00C2A8" stroke-width="1.5" fill="rgba(0,194,168,0.04)" opacity="0.3"/>
-            <!-- Canal central -->
-            <line x1="200" y1="132" x2="200" y2="143" stroke="#00C2A8" stroke-width="2.5" opacity="0.5"/>
-            <line x1="200" y1="227" x2="200" y2="238" stroke="#00C2A8" stroke-width="2.5" opacity="0.45"/>
-            <line x1="200" y1="322" x2="200" y2="333" stroke="#00C2A8" stroke-width="2.5" opacity="0.4"/>
-            <line x1="200" y1="417" x2="200" y2="430" stroke="#00C2A8" stroke-width="2"   opacity="0.3"/>
-            <!-- Apófisis transversas -->
-            <line x1="135" y1="90"  x2="70"  y2="70"  stroke="#1B4F8A" stroke-width="1.5" opacity="0.4"/>
-            <line x1="265" y1="90"  x2="330" y2="70"  stroke="#1B4F8A" stroke-width="1.5" opacity="0.4"/>
-            <line x1="135" y1="185" x2="70"  y2="165" stroke="#1B4F8A" stroke-width="1.5" opacity="0.35"/>
-            <line x1="265" y1="185" x2="330" y2="165" stroke="#1B4F8A" stroke-width="1.5" opacity="0.35"/>
-            <line x1="135" y1="280" x2="70"  y2="260" stroke="#1B4F8A" stroke-width="1.5" opacity="0.3"/>
-            <line x1="265" y1="280" x2="330" y2="260" stroke="#1B4F8A" stroke-width="1.5" opacity="0.3"/>
-            <line x1="140" y1="375" x2="80"  y2="358" stroke="#1B4F8A" stroke-width="1.5" opacity="0.22"/>
-            <line x1="260" y1="375" x2="320" y2="358" stroke="#1B4F8A" stroke-width="1.5" opacity="0.22"/>
-            <!-- Puntos de articulación -->
-            <circle cx="200" cy="90"  r="5" fill="#00C2A8" opacity="0.7"/>
-            <circle cx="200" cy="185" r="5" fill="#00C2A8" opacity="0.6"/>
-            <circle cx="200" cy="280" r="5" fill="#00C2A8" opacity="0.5"/>
-            <circle cx="200" cy="375" r="4" fill="#00C2A8" opacity="0.38"/>
-          </svg>
-        </div>
       </div>
     </section>
 

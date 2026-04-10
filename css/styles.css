@@ -453,6 +453,51 @@ h1, h2, h3, h4, h5 {
   margin-right: auto;
 }
 
+/* Desktop: alinear izquierda, compactar, y caber en 100vh */
+@media (min-width: 1025px) {
+  .hero--video {
+    padding: calc(var(--space-lg) + 4.5rem) 0 var(--space-lg);
+  }
+
+  .hero--video .hero-grid {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .hero--video .hero-content {
+    max-width: 780px;
+  }
+
+  .hero--video .hero-tag,
+  .hero--video .hero-actions,
+  .hero--video .hero-trust {
+    justify-content: flex-start;
+  }
+
+  .hero--video .hero-tag {
+    margin-bottom: 0.85rem;
+  }
+
+  .hero--video .hero-title {
+    font-size: clamp(2.75rem, 4.8vw, 4.25rem);
+    line-height: 1.08;
+    margin-bottom: 1rem;
+  }
+
+  .hero--video .hero-subtitle {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 620px;
+    margin-bottom: 1.5rem;
+    font-size: var(--text-base);
+  }
+
+  .hero--video .hero-actions {
+    margin-bottom: 1.75rem;
+  }
+}
+
 .hero-tag {
   display: inline-flex;
   align-items: center;

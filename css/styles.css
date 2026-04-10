@@ -238,15 +238,36 @@ h1, h2, h3, h4, h5 {
   padding: 0.65rem 0;
 }
 
-/* Header transparente sobre hero con video */
+/* Header transparente sobre hero con video (skill: encabezado-transparente) */
+/* Nota: override de position:fixed para que el header scrollee con la página */
 .header--transparent {
+  position: absolute;
   background: transparent;
   backdrop-filter: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
 }
 
-.header--transparent.scrolled {
-  background: var(--color-primary);
+.header--transparent:hover {
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* En la variante transparente, el estado scrolled no aplica (absolute se va con el scroll) */
+.header--transparent.scrolled {
+  background: transparent;
+  box-shadow: none;
+  padding: 1rem 0;
+}
+
+.header--transparent:hover.scrolled {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Logo más compacto (skill pide 70-85px en desktop) */
+.header--transparent .logo-img {
+  height: 78px;
 }
 
 .nav {

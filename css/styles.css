@@ -1924,12 +1924,23 @@ h1, h2, h3, h4, h5 {
     padding: 0.75rem 1rem;
   }
 
+  /* En móvil, el CTA "Agendar cita" se ve como link normal (sin botón azul) */
   .nav-cta {
     margin-left: 0;
-    margin-top: 0.5rem;
-    text-align: center;
+    margin-top: 0;
+    background: transparent !important;
+    color: rgba(255,255,255,0.85) !important;
+    padding: 0.75rem 1rem;
+    border-radius: 0;
     width: 100%;
-    justify-content: center;
+    text-align: left;
+    justify-content: flex-start;
+    font-weight: 500;
+  }
+
+  .nav-cta:hover {
+    background: transparent !important;
+    color: var(--color-accent) !important;
   }
 
   .nav-toggle {

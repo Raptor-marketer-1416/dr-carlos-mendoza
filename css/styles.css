@@ -492,6 +492,10 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 1rem;
   }
 
+  .hero--video .hero-title .hero-title-lead {
+    white-space: nowrap;
+  }
+
   .hero--video .hero-subtitle {
     margin-left: 0;
     margin-right: 0;

@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=12">
+  <link rel="stylesheet" href="../css/styles.css?v=13">
   <link rel="icon" href="../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <!-- Open Graph -->
@@ -465,7 +465,7 @@
   </div>
 </div>
 
-  <script src="../js/main.js?v=12" defer></script>
+  <script src="../js/main.js?v=13" defer></script>
 
   <!-- Form handler -->
   <script>
@@ -496,6 +496,17 @@
             `Motivo: ${motivo}\n` +
             (mensaje ? `Mensaje: ${mensaje}` : '')
           )}`;
+
+          // Tracking GTM
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            'event': 'lead_submission',
+            'form_id': 'contactForm',
+            'lead_type': 'contacto_web',
+            'lead_name': nombre,
+            'lead_service': motivo,
+            'value': 500
+          });
 
           // Mostrar éxito y redirigir a WA
           form.style.display = 'none';

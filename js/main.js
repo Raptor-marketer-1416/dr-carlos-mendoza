@@ -243,7 +243,19 @@ function initConversionButtons() {
 }
 
 // ================================================
-// 9. INICIALIZACIÓN
+// 9. EMAIL TRACKING (dataLayer)
+// ================================================
+function initEmailTracking() {
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'event': 'email_click', 'lead_type': 'email' });
+    });
+  });
+}
+
+// ================================================
+// 10. INICIALIZACIÓN
 // ================================================
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
@@ -253,4 +265,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initActiveNav();
   initConversionButtons();
+  initEmailTracking();
 });

@@ -413,6 +413,14 @@ h1, h2, h3, h4, h5 {
   pointer-events: none;
 }
 
+/* Mostrar horizontal en desktop, vertical en móvil */
+.hero-video--mobile { display: none; }
+
+@media (max-width: 768px) {
+  .hero-video--desktop { display: none; }
+  .hero-video--mobile { display: block; }
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;

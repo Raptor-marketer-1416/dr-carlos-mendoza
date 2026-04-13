@@ -5,7 +5,7 @@
    ================================================ */
 
 /* 0. Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+/* Fuentes movidas a <link> tags en el HTML para mejor performance (preconnect + no render blocking) */
 
 /* ================================================
    1. VARIABLES
@@ -75,6 +75,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -84,6 +85,8 @@ body {
   background-color: var(--color-bg);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 img, video {

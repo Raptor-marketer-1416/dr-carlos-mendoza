@@ -543,6 +543,10 @@ h1, h2, h3, h4, h5 {
   color: var(--color-accent);
 }
 
+.hero-title .hero-title-lead {
+  color: #fff;
+}
+
 .hero-subtitle {
   font-size: var(--text-lg);
   color: rgba(255,255,255,0.75);

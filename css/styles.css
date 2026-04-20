@@ -377,6 +377,90 @@ h1, h2, h3, h4, h5 {
   transition: all var(--transition);
 }
 
+/* ---- SUBMENÚ / DROPDOWN NAV ---- */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform var(--transition);
+  opacity: 0.7;
+}
+
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  min-width: 260px;
+  background: var(--color-primary);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  z-index: 1001;
+}
+
+.has-submenu:hover .nav-submenu,
+.has-submenu:focus-within .nav-submenu,
+.has-submenu.open .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.has-submenu:hover .nav-caret,
+.has-submenu.open .nav-caret {
+  transform: rotate(180deg);
+}
+
+.nav-sublink {
+  display: block;
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav-sublink:hover,
+.nav-sublink:focus-visible {
+  color: var(--color-accent);
+  background: rgba(0,194,168,0.08);
+}
+
+.nav-sublink-pillar {
+  color: var(--color-accent);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.65rem;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.nav-submenu-toggle {
+  display: none;
+}
+
 /* ================================================
    7. HERO
    ================================================ */
@@ -1922,15 +2006,16 @@ h1, h2, h3, h4, h5 {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 300px;
     height: 100vh;
     background: var(--color-primary);
     flex-direction: column;
     align-items: flex-start;
-    padding: 5rem 2rem 2rem;
-    gap: 0.5rem;
+    padding: 5rem 1.25rem 2rem;
+    gap: 0.25rem;
     transition: right var(--transition);
     box-shadow: -4px 0 30px rgba(0,0,0,0.3);
+    overflow-y: auto;
   }
 
   .nav-menu.open {
@@ -1941,6 +2026,75 @@ h1, h2, h3, h4, h5 {
     font-size: var(--text-base);
     width: 100%;
     padding: 0.75rem 1rem;
+  }
+
+  /* Submenu móvil: tipo acordeón */
+  .has-submenu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .has-submenu > .has-submenu-link {
+    flex: 1;
+    width: auto;
+  }
+
+  .has-submenu-link .nav-caret {
+    display: none; /* En móvil usamos el botón toggle */
+  }
+
+  .nav-submenu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgba(255,255,255,0.85);
+    padding: 0;
+  }
+
+  .nav-submenu-toggle .nav-caret {
+    border-top-color: currentColor;
+  }
+
+  .has-submenu.open .nav-submenu-toggle .nav-caret {
+    transform: rotate(180deg);
+  }
+
+  .nav-submenu {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    background: rgba(0,0,0,0.2);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.5rem;
+    box-shadow: none;
+    opacity: 1;
+    visibility: hidden;
+    transform: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, visibility 0s 0.3s, padding 0.3s ease;
+    margin: 0;
+  }
+
+  .has-submenu.open .nav-submenu {
+    visibility: visible;
+    max-height: 600px;
+    transition: max-height 0.4s ease, visibility 0s, padding 0.3s ease;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-sublink {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.9rem;
   }
 
   /* En móvil, el CTA "Agendar cita" se ve como link normal (sin botón azul) */

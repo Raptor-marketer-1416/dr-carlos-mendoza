@@ -64,9 +64,32 @@ function initMenu() {
     if (e.key === 'Escape') closeMenu();
   });
 
-  // Cerrar al hacer clic en un link del menú
-  menu.querySelectorAll('.nav-link').forEach(link => {
+  // Cerrar al hacer clic en un link del menú (excepto el que abre submenú)
+  menu.querySelectorAll('.nav-link:not(.has-submenu-link)').forEach(link => {
     link.addEventListener('click', closeMenu);
+  });
+  menu.querySelectorAll('.nav-sublink').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Submenús: toggle de acordeón en móvil
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+  menu.querySelectorAll('.has-submenu').forEach(item => {
+    const toggle = item.querySelector('.nav-submenu-toggle');
+    const parentLink = item.querySelector('.has-submenu-link');
+
+    const toggleSubmenu = (e) => {
+      if (!isMobile()) return;
+      e.preventDefault();
+      const isOpen = item.classList.toggle('open');
+      toggle?.setAttribute('aria-expanded', String(isOpen));
+      parentLink?.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    toggle?.addEventListener('click', toggleSubmenu);
+    parentLink?.addEventListener('click', (e) => {
+      if (isMobile()) toggleSubmenu(e);
+    });
   });
 }
 

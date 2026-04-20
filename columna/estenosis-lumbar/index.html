@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/styles.css?v=15">
+  <link rel="stylesheet" href="../../css/styles.css?v=16">
   <link rel="icon" href="../../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <script type="application/ld+json">
@@ -114,8 +114,34 @@
       </a>
       <ul class="nav-menu" id="nav-menu" role="list">
         <li><a href="../../" class="nav-link">Inicio</a></li>
-        <li><a href="../../columna/" class="nav-link active" aria-current="page">Cirugía de Columna</a></li>
-        <li><a href="../../cerebro/" class="nav-link">Cirugía Cerebral</a></li>
+        <li class="has-submenu">
+          <a href="../../columna/" class="nav-link has-submenu-link active" aria-current="page" aria-haspopup="true" aria-expanded="false">Cirugía de Columna<span class="nav-caret" aria-hidden="true"></span></a>
+          <button class="nav-submenu-toggle" type="button" aria-label="Abrir submenú Columna" aria-expanded="false"><span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-submenu" role="menu">
+            <li role="none"><a href="../../columna/" class="nav-sublink nav-sublink-pillar" role="menuitem">Ver todas →</a></li>
+          <li role="none"><a href="../../columna/hernia-discal-lumbar/" class="nav-sublink" role="menuitem">Hernia discal lumbar</a></li>
+          <li role="none"><a href="../../columna/hernia-discal-cervical/" class="nav-sublink" role="menuitem">Hernia discal cervical</a></li>
+          <li role="none"><a href="../../columna/ciatica/" class="nav-sublink" role="menuitem">Ciática</a></li>
+          <li role="none"><a href="../../columna/estenosis-lumbar/" class="nav-sublink" role="menuitem">Estenosis lumbar</a></li>
+          <li role="none"><a href="../../columna/espondilolistesis/" class="nav-sublink" role="menuitem">Espondilolistesis</a></li>
+          <li role="none"><a href="../../columna/escoliosis/" class="nav-sublink" role="menuitem">Escoliosis</a></li>
+          <li role="none"><a href="../../columna/fractura-vertebral/" class="nav-sublink" role="menuitem">Fractura vertebral</a></li>
+          <li role="none"><a href="../../columna/dolor-lumbar-cronico/" class="nav-sublink" role="menuitem">Dolor lumbar crónico</a></li>
+          <li role="none"><a href="../../columna/cirugia-endoscopica/" class="nav-sublink" role="menuitem">Cirugía endoscópica</a></li>
+          <li role="none"><a href="../../columna/artrodesis/" class="nav-sublink" role="menuitem">Artrodesis</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../../cerebro/" class="nav-link has-submenu-link" aria-haspopup="true" aria-expanded="false">Cirugía Cerebral<span class="nav-caret" aria-hidden="true"></span></a>
+          <button class="nav-submenu-toggle" type="button" aria-label="Abrir submenú Cerebro" aria-expanded="false"><span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-submenu" role="menu">
+            <li role="none"><a href="../../cerebro/" class="nav-sublink nav-sublink-pillar" role="menuitem">Ver todas →</a></li>
+          <li role="none"><a href="../../cerebro/tumores-cerebrales/" class="nav-sublink" role="menuitem">Tumores cerebrales</a></li>
+          <li role="none"><a href="../../cerebro/aneurisma-cerebral/" class="nav-sublink" role="menuitem">Aneurisma cerebral</a></li>
+          <li role="none"><a href="../../cerebro/hematoma-subdural/" class="nav-sublink" role="menuitem">Hematoma subdural</a></li>
+          <li role="none"><a href="../../cerebro/traumatismo-craneoencefalico/" class="nav-sublink" role="menuitem">Traumatismo craneoencefálico</a></li>
+          </ul>
+        </li>
         <li><a href="../../doctor/" class="nav-link">El Doctor</a></li>
         <li><a href="../../contacto/" class="nav-link nav-cta">Agendar consulta</a></li>
       </ul>
@@ -438,6 +464,6 @@
 </div>
 
 
-  <script src="../../js/main.js?v=16" defer></script>
+  <script src="../../js/main.js?v=17" defer></script>
 </body>
 </html>

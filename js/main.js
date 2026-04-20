@@ -226,6 +226,19 @@ function initConversionButtons() {
   cancelCallBtn?.addEventListener('click', closeCallModal);
   callModal?.addEventListener('click', e => { if (e.target === callModal) closeCallModal(); });
 
+  // Interceptar TODOS los <a href="tel:..."> → abrir modal de llamada
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', openCallModal);
+  });
+
+  // Interceptar TODOS los <a href*="wa.me"> y api.whatsapp → abrir modal de WhatsApp
+  document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      openWaModal();
+    });
+  });
+
   confirmCallBtn?.addEventListener('click', () => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ 'event': 'call_confirmed', 'destination_number': '+52' + CONFIG.phone });

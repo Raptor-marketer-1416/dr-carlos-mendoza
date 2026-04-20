@@ -225,9 +225,9 @@ function initConversionButtons() {
     const name = document.getElementById('wa-name').value;
     const service = document.getElementById('wa-service').value;
 
-    // Tracking GTM
+    // Tracking GTM — evento estándar Raptor Marketer
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 'event': 'whatsapp_lead', 'lead_name': name, 'lead_service': service });
+    window.dataLayer.push({ 'event': 'whatsapp_click', 'lead_name': name, 'lead_service': service });
     window.dataLayer.push({ 'event': 'user_data_capture', 'user_data': { 'address': { 'first_name': name } } });
 
     const message = `Hola Dr. Carlos Mendoza, soy ${name}. Me interesa: ${service}.`;
@@ -263,8 +263,9 @@ function initConversionButtons() {
   });
 
   confirmCallBtn?.addEventListener('click', () => {
+    // Tracking GTM — evento estándar Raptor Marketer
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 'event': 'call_confirmed', 'destination_number': '+52' + CONFIG.phone });
+    window.dataLayer.push({ 'event': 'call_click', 'destination_number': '+52' + CONFIG.phone });
     window.location.href = 'tel:+52' + CONFIG.phone;
     closeCallModal();
   });

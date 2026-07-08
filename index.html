@@ -47,14 +47,14 @@
         "@type": "WebSite",
         "@id": "https://neurocirujanoqueretaro.com/#website",
         "url": "https://neurocirujanoqueretaro.com",
-        "name": "Dr. Carlos Mendoza | Neurocirujano",
+        "name": "Dr. Carlos Mendoza | Neurocirujano Querétaro",
         "description": "Neurocirujano certificado en Querétaro, especialista en cirugía de columna vertebral por mínima invasión.",
         "inLanguage": "es-MX"
       },
       {
         "@type": ["Physician", "LocalBusiness"],
         "@id": "https://neurocirujanoqueretaro.com/#physician",
-        "name": "Dr. Carlos Mendoza | Neurocirujano",
+        "name": "Dr. Carlos Mendoza | Neurocirujano Querétaro",
         "legalName": "Carlos Alberto Mendoza García",
         "description": "Neurocirujano certificado en Querétaro, especialista en cirugía de columna vertebral por mínima invasión. Egresado con mención honorífica de la UNAM, con especialidad en el Hospital General de México y formación internacional en Brasil y EUA.",
         "url": "https://neurocirujanoqueretaro.com",
@@ -71,11 +71,12 @@
           "addressCountry": "MX"
         },
         "geo": { "@type": "GeoCoordinates", "latitude": "20.5841336", "longitude": "-100.4099596" },
+        "hasMap": "https://maps.app.goo.gl/d8PUZUyhGdNTPFSx6",
         "openingHoursSpecification": [
           { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "21:00" },
           { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
         ],
-        "medicalSpecialty": "https://schema.org/NeurologicalSurgery",
+        "medicalSpecialty": ["https://schema.org/Neurologic", "https://schema.org/Surgical"],
         "priceRange": "$$",
         "paymentAccepted": "Efectivo, Tarjeta de crédito, Inbursa",
         "currenciesAccepted": "MXN",
@@ -97,29 +98,86 @@
           "@id": "https://neurocirujanoqueretaro.com/#doctor",
           "name": "Carlos Alberto Mendoza García",
           "honorificPrefix": "Dr.",
-          "jobTitle": "Neurocirujano",
+          "jobTitle": "Neurocirujano · Especialista en cirugía de columna",
           "image": "https://neurocirujanoqueretaro.com/img/dr-carlos-mendoza.webp",
+          "birthDate": "1990-09-20",
           "knowsLanguage": ["es", "en", "pt"],
-          "alumniOf": [
-            { "@type": "EducationalOrganization", "name": "Universidad Nacional Autónoma de México (UNAM)", "description": "Médico Cirujano — Egresado con mención honorífica" },
-            { "@type": "EducationalOrganization", "name": "Hospital General de México Dr. Eduardo Liceaga", "description": "Especialidad en Neurocirugía — 2016 a 2021" },
-            { "@type": "EducationalOrganization", "name": "Universidade Federal de São Paulo", "description": "Rotación en neurocirugía vascular — 2019" }
-          ],
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Certificado por el Consejo Mexicano de Cirugía Neurológica",
-            "credentialCategory": "Especialidad médica",
-            "validIn": { "@type": "AdministrativeArea", "name": "México" }
+          "medicalSpecialty": "https://schema.org/Neurologic",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Neurocirujano",
+            "occupationalCategory": "Cirugía Neurológica"
           },
+          "knowsAbout": [
+            "Cirugía de columna vertebral",
+            "Cirugía endoscópica de columna",
+            "Hernia discal lumbar",
+            "Hernia discal cervical",
+            "Ciática",
+            "Estenosis lumbar",
+            "Artrodesis vertebral",
+            "Tumores cerebrales",
+            "Aneurismas cerebrales",
+            "Cirugía cerebrovascular",
+            "Hematoma subdural",
+            "Cirugía de base de cráneo",
+            "Neurocirugía funcional",
+            "Neurocirugía mínimamente invasiva"
+          ],
+          "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "Universidad Nacional Autónoma de México (UNAM)", "description": "Médico Cirujano — Egresado con mención honorífica (promedio 9.0)" },
+            { "@type": "EducationalOrganization", "name": "Hospital General de México Dr. Eduardo Liceaga", "description": "Especialidad en Neurocirugía (2016–2021) — Jefe de Residentes" },
+            { "@type": "CollegeOrUniversity", "name": "Universidade Federal de São Paulo", "description": "Rotación en cirugía cerebrovascular — 2019" }
+          ],
+          "identifier": [
+            { "@type": "PropertyValue", "propertyID": "Cédula Profesional (Licenciatura)", "value": "09148541" },
+            { "@type": "PropertyValue", "propertyID": "Cédula de Especialidad", "value": "12474496" }
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Cédula Profesional",
+              "name": "Médico Cirujano",
+              "recognizedBy": { "@type": "GovernmentOrganization", "name": "Dirección General de Profesiones, SEP" },
+              "identifier": { "@type": "PropertyValue", "propertyID": "Cédula Profesional", "value": "09148541" }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Cédula de Especialidad",
+              "name": "Especialidad en Neurocirugía",
+              "recognizedBy": { "@type": "GovernmentOrganization", "name": "Dirección General de Profesiones, SEP" },
+              "identifier": { "@type": "PropertyValue", "propertyID": "Cédula de Especialidad", "value": "12474496" }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Certificación de Especialidad",
+              "name": "Certificado por el Consejo Mexicano de Cirugía Neurológica",
+              "recognizedBy": { "@type": "Organization", "name": "Consejo Mexicano de Cirugía Neurológica" }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Diplomado",
+              "name": "Prescripción Basada en la Evidencia",
+              "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Facultad de Medicina, UNAM" }
+            }
+          ],
           "memberOf": { "@type": "Organization", "name": "Colegio de Cirugía Neurológica A.C." },
           "worksFor": { "@type": "EducationalOrganization", "name": "Escuela de Medicina Anáhuac Querétaro", "description": "Profesor de Neurología — 2022 a la fecha" },
-          "author": {
-            "@type": "ScholarlyArticle",
-            "name": "Healthy years of life gained after minimal invasive spine surgery in lumbar degenerative disease. Medial central approach.",
-            "datePublished": "2024",
-            "isPartOf": { "@type": "Periodical", "name": "Cirugía de Columna", "volumeNumber": "2", "issueNumber": "1" },
-            "pagination": "26-33"
-          }
+          "author": [
+            {
+              "@type": "ScholarlyArticle",
+              "name": "Healthy years of life gained after minimal invasive spine surgery in lumbar degenerative disease. Medial central approach.",
+              "datePublished": "2024",
+              "isPartOf": { "@type": "Periodical", "name": "Cirugía de Columna", "volumeNumber": "2", "issueNumber": "1" },
+              "pagination": "26-33"
+            },
+            {
+              "@type": "ScholarlyArticle",
+              "name": "Hybrid management of cerebral aneurysm",
+              "datePublished": "2020",
+              "isPartOf": { "@type": "Periodical", "name": "Revista Latinoamericana de Neurocirugía", "volumeNumber": "29", "issueNumber": "6" }
+            }
+          ]
         },
         "sameAs": [
           "https://www.doctoralia.com.mx/carlos-alberto-mendoza-garcia/neurocirujano/santiago-de-queretaro",

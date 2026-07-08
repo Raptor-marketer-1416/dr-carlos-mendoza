@@ -6,3 +6,6 @@ prompt-diseno-referencia.md
 .htaccess
 publicar.bat
 .wrangler/
+# Capturas de verificación y artefactos de navegador (no versionar)
+.playwright-mcp/
+/*.png

@@ -1224,23 +1224,11 @@ h1, h2, h3, h4, h5 {
 /* ================================================
    15. RESEÑAS
    ================================================ */
-.reviews-wrap {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
-  background: var(--color-bg-alt);
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: var(--space-lg);
-}
-
-.reviews-placeholder p {
-  color: var(--color-text-muted);
-  font-family: var(--font-display);
+/* Carrusel de reseñas TrustIndex — ancho completo, sin bordes laterales.
+   El estilo y los colores del carrusel se configuran en el panel de TrustIndex. */
+.reviews-widget {
+  width: 100%;
+  margin-top: var(--space-lg);
 }
 
 /* ================================================

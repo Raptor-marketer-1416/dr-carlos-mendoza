@@ -141,19 +141,8 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- LEGAL -->
-  <url>
-    <loc>https://neurocirujanoqueretaro.com/aviso-de-privacidad/</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
-  <url>
-    <loc>https://neurocirujanoqueretaro.com/terminos-y-condiciones/</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
+  <!-- LEGAL: aviso-de-privacidad y terminos-y-condiciones NO van en el sitemap.
+       Son noindex a proposito (meta robots), y listarlas aqui seria una senal
+       contradictoria para Google (sitemap dice "indexa" / meta dice "no indexes"). -->
 
 </urlset>

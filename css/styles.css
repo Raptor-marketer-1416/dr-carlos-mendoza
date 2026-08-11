@@ -3048,3 +3048,51 @@ figure.ed-split__media { margin: 0; }
   .ed-stats { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
   .article-ed { padding: var(--space-md) var(--space-sm); }
 }
+
+/* ================================================
+   FIX — Plantilla de páginas internas con <ol> + content-section
+   Unifica el hero y el layout de las páginas que NO usan
+   .page-hero-title ni .content-sidebar. Corrige: breadcrumb
+   apilado, <h1> invisible (heredaba color oscuro sobre fondo
+   oscuro) y secciones sin padding/columnas.
+   ================================================ */
+
+/* Breadcrumb con lista <ol><li> → horizontal, igual que la versión con spans */
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb li { display: inline-flex; align-items: center; }
+.breadcrumb li[aria-current] { color: rgba(255,255,255,0.55); }
+.breadcrumb li[aria-hidden] { color: rgba(255,255,255,0.25); }
+
+/* Título del hero cuando el <h1> no lleva .page-hero-title */
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.15;
+}
+.page-hero h1 span { color: var(--color-accent); }
+
+/* Sección de contenido + layout de 2 columnas (article + aside) */
+.content-section { padding: var(--space-lg) 0; }
+.content-sidebar-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-lg);
+  align-items: start;
+}
+.content-aside > * + * { margin-top: 1rem; }
+
+@media (max-width: 900px) {
+  .content-sidebar-layout { grid-template-columns: 1fr; }
+}

@@ -3104,6 +3104,8 @@ figure.ed-split__media { margin: 0; }
 /* Banda full-width con la foto de fondo + overlay + frase (fotos de síntoma) */
 .img-band {
   position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   min-height: 360px;
   display: flex;
   align-items: center;

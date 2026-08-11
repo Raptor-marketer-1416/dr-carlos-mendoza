@@ -3276,3 +3276,22 @@ figure.ed-split__media { margin: 0; }
 .footer-contact address { font-style: normal; color: rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: 1.7; }
 .footer-contact a { color: rgba(255,255,255,0.7); transition: color var(--transition); }
 .footer-contact a:hover { color: var(--color-accent); }
+
+/* ================================================
+   FIX — accesibilidad y utilidades faltantes
+   ================================================ */
+/* .sr-only: contenido solo para lectores de pantalla (estaba VISIBLE:
+   se veían sueltos los títulos "Trayectoria del Dr. Carlos Mendoza" etc.) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* Padding de sección usado en contacto */
+.section-padding { padding: var(--space-lg) 0; }

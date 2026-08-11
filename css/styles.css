@@ -2883,3 +2883,168 @@ h1, h2, h3, h4, h5 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================================
+   PLACEHOLDER DE IMAGEN (marca dónde va una foto)
+   Reemplazar el <div class="img-ph">…</div> por un
+   <img> cuando la foto real esté lista.
+   ================================================ */
+.img-ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.6rem;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  padding: 1.75rem 1.5rem;
+  background:
+    repeating-linear-gradient(45deg, rgba(0,194,168,0.04) 0 12px, transparent 12px 24px),
+    var(--color-bg-alt);
+  border: 2px dashed var(--color-accent);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+}
+.img-ph__icon {
+  width: 44px;
+  height: 44px;
+  color: var(--color-accent);
+  opacity: 0.85;
+}
+.img-ph__label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-dark);
+}
+.img-ph__desc {
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  max-width: 46ch;
+  color: var(--color-text-muted);
+}
+.img-ph__desc strong { color: var(--color-primary); }
+
+/* Imágenes editoriales que sustituyen los placeholders */
+.richtext figure > img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ================================================
+   LAYOUT EDITORIAL DE ARTÍCULOS (.article-ed)
+   Rompe la "columna plana": alterna texto ↔ imagen
+   y usa franjas a todo el ancho.
+   ================================================ */
+.article-ed {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* Bloque de solo lectura: medida cómoda, centrado */
+.ed-read {
+  max-width: 820px;
+  margin-inline: auto;
+}
+.ed-read + .ed-read { margin-top: var(--space-md); }
+
+/* Sección texto ↔ imagen lado a lado */
+.ed-split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--space-md);
+  align-items: center;
+  margin: var(--space-lg) auto;
+}
+.ed-split__media {
+  align-self: stretch;
+  min-height: 100%;
+}
+.ed-split__media figure,
+figure.ed-split__media { margin: 0; }
+.ed-split__media figcaption {
+  margin-top: 0.5rem;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+.ed-split__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+/* Variante invertida: imagen a la izquierda en desktop */
+.ed-split--rev .ed-split__media { order: -1; }
+
+/* Franja a todo el ancho de la ventana (full-bleed) */
+.ed-band {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: var(--space-lg) var(--space-md);
+}
+.ed-band--soft { background: var(--color-bg-alt); }
+.ed-band--dark { background: var(--color-primary); color: var(--color-text-light); }
+.ed-band--dark h2, .ed-band--dark h3 { color: var(--color-text-light); }
+.ed-band__inner { max-width: 1140px; margin: 0 auto; }
+
+/* Franja de cifras clave */
+.ed-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  text-align: center;
+}
+.ed-stat__num {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1.1;
+}
+.ed-stat__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+}
+.ed-band--dark .ed-stat__label { color: rgba(255,255,255,0.8); }
+
+/* Bloque de caso / dato destacado */
+.ed-case {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-text-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin: var(--space-lg) auto;
+  box-shadow: var(--shadow-md);
+}
+.ed-case h3, .ed-case strong { color: var(--color-text-light); }
+.ed-case__tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 860px) {
+  .ed-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  /* En móvil el texto siempre va primero (orden de lectura) */
+  .ed-split--rev .ed-split__media { order: 0; }
+  .ed-stats { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+  .article-ed { padding: var(--space-md) var(--space-sm); }
+}

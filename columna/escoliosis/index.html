@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/styles.css?v=28">
+  <link rel="stylesheet" href="../../css/styles.css?v=29">
   <link rel="icon" href="../../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <script type="application/ld+json">
@@ -170,13 +170,12 @@
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="container">
-        <div class="content-sidebar-layout">
+    <!-- CONTENIDO EDITORIAL -->
+    <article class="article-ed" aria-label="Información sobre escoliosis">
 
-          <article class="richtext" aria-label="Información sobre escoliosis">
-
-            <p><strong>La escoliosis es una curvatura lateral anormal de la columna vertebral que además gira cada vértebra sobre su eje.</strong> No se corrige con dormir derecho ni con masajes — es un problema estructural que en algunos casos puede progresar. En Querétaro, el Dr. Carlos Mendoza evalúa escoliosis en adolescentes y adultos, define el plan de seguimiento y opera las curvas que requieren corrección quirúrgica con instrumentación pedicular.</p>
+      <div class="ed-read richtext">
+        <p style="font-size: var(--text-lg);"><strong>La escoliosis es una curvatura lateral anormal de la columna vertebral que además gira cada vértebra sobre su eje.</strong> No se corrige con dormir derecho ni con masajes — es un problema estructural que en algunos casos puede progresar.</p>
+        <p>En Querétaro, el Dr. Carlos Mendoza evalúa escoliosis en adolescentes y adultos, define el plan de seguimiento y opera las curvas que requieren corrección quirúrgica con instrumentación pedicular.</p>
 
             <h2>Tipos de escoliosis</h2>
             <h3>Escoliosis idiopática del adolescente</h3>
@@ -191,12 +190,33 @@
               <li><strong>Neuromuscular</strong> — asociada a parálisis cerebral, distrofia muscular, mielomeningocele</li>
               <li><strong>Sindrómica</strong> — Marfan, neurofibromatosis, Ehlers-Danlos</li>
             </ul>
+      </div>
 
+      <!-- Split: detección (test de Adams) + FOTO doctor evaluando la espalda -->
+      <div class="ed-split">
+        <div class="ed-split__text richtext">
+          <h2>Cómo se detecta — el test de Adams</h2>
+          <p>La exploración clásica es el test de Adams: con el paciente inclinado hacia adelante, se observa desde atrás si hay una "giba" costal de un lado. Junto con asimetría de hombros, cintura o caderas, son los hallazgos que hacen sospechar escoliosis. El diagnóstico se confirma y cuantifica con una radiografía de columna completa de pie, midiendo el ángulo de Cobb.</p>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza evaluando la curvatura de la espalda con el test de Adams">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza evaluando la curvatura de la espalda del paciente (test de Adams, inclinado hacia adelante).</p>
+          </div>
+        </figure>
+      </div>
 
-            <h2>Cómo se detecta — el test de Adams</h2>
-            <p>La exploración clásica es el test de Adams: con el paciente inclinado hacia adelante, se observa desde atrás si hay una "giba" costal de un lado. Junto con asimetría de hombros, cintura o caderas, son los hallazgos que hacen sospechar escoliosis. El diagnóstico se confirma y cuantifica con una radiografía de columna completa de pie, midiendo el ángulo de Cobb.</p>
+      <!-- Banda de síntoma full-width (foto existente del silo) -->
+      <div class="img-band" style="background-image: url('../../img/escoliosis-curvatura-columna-queretaro.webp');" role="img" aria-label="Curvatura lateral de la columna en la escoliosis — Dr. Carlos Mendoza, Querétaro">
+        <div class="img-band__inner">
+          <p>«Una columna que se desvía de su eje no siempre duele al principio, pero detectarla a tiempo cambia el tratamiento.»</p>
+          <cite>Dr. Carlos Mendoza · Neurocirujano</cite>
+        </div>
+      </div>
 
-            <h2>Síntomas de la escoliosis</h2>
+      <div class="ed-read richtext">
+        <h2>Síntomas de la escoliosis</h2>
             <p>En la escoliosis idiopática del adolescente rara vez hay dolor — el motivo de consulta suele ser la asimetría visible. En la escoliosis del adulto los síntomas son más floridos:</p>
             <ul>
               <li><strong>Asimetría visible</strong> — un hombro más alto, una cintura más marcada de un lado, una cadera más prominente</li>
@@ -207,16 +227,31 @@
               <li><strong>Fatiga</strong> con la posición erguida prolongada</li>
               <li>En curvas severas, alteración respiratoria por deformidad torácica</li>
             </ul>
+      </div>
 
-            <h2>Clasificación por ángulo de Cobb</h2>
-            <ul>
-              <li><strong>Menor de 10°</strong> — asimetría postural, no se considera escoliosis</li>
-              <li><strong>10-25°</strong> — escoliosis leve, vigilancia radiológica periódica</li>
-              <li><strong>25-40°</strong> — moderada, en adolescentes en crecimiento puede indicarse corsé (Boston)</li>
-              <li><strong>Mayor de 45-50°</strong> — severa, en adolescentes es indicación quirúrgica</li>
-            </ul>
+      <!-- Split (rev): clasificación por ángulo de Cobb + FOTO doctor con la radiografía -->
+      <div class="ed-split ed-split--rev">
+        <div class="ed-split__text richtext">
+          <h2>Clasificación por ángulo de Cobb</h2>
+          <p>El ángulo de Cobb, medido sobre la radiografía de columna completa de pie, define la gravedad de la curva y orienta la conducta a seguir:</p>
+          <ul>
+            <li><strong>Menor de 10°</strong> — asimetría postural, no se considera escoliosis</li>
+            <li><strong>10-25°</strong> — escoliosis leve, vigilancia radiológica periódica</li>
+            <li><strong>25-40°</strong> — moderada, en adolescentes en crecimiento puede indicarse corsé (Boston)</li>
+            <li><strong>Mayor de 45-50°</strong> — severa, en adolescentes es indicación quirúrgica</li>
+          </ul>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza mostrando la radiografía de columna con el ángulo de la curva">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza mostrando la radiografía de columna completa con el ángulo de la curva.</p>
+          </div>
+        </figure>
+      </div>
 
-            <h2>Tratamiento según etapa</h2>
+      <div class="ed-read richtext">
+        <h2>Tratamiento según etapa</h2>
             <h3>Vigilancia</h3>
             <p>Para curvas leves en adolescentes, se hace control radiográfico cada 6 meses durante el crecimiento. Si no progresa, no se hace nada. Se recomienda fisioterapia específica (método Schroth o SEAS) como apoyo.</p>
 
@@ -236,61 +271,12 @@
               <li><strong>Deporte de impacto:</strong> 6-12 meses (tiempo que tarda la fusión ósea en consolidar)</li>
               <li>Seguimiento con radiografías a los 3, 6, 12 y 24 meses</li>
             </ul>
-
-          </article>
-
-          <aside class="content-aside">
-            <div class="sidebar-card sidebar-card--cta">
-              <p class="sidebar-card-tag">Consulta de escoliosis</p>
-              <h3 class="sidebar-card-title">¿Te detectaron escoliosis?</h3>
-              <p class="sidebar-card-desc">Trae tus radiografías. Medimos el ángulo de Cobb, evaluamos si hay progresión y definimos si corresponde vigilancia, corsé o cirugía.</p>
-              <a href="tel:4423679614" class="btn btn-warm btn-full">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                442 367-9614
-              </a>
-              <a href="https://wa.me/524423679614?text=Hola%2C%20me%20detectaron%20escoliosis%20y%20quisiera%20una%20evaluaci%C3%B3n." class="btn btn-outline btn-full" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Consultorios</h4>
-              <div class="sidebar-info-item">
-                <strong>Hospital H+ Querétaro</strong>
-                <span>Priv. Ignacio Zaragoza 16A, Torre 1, Cons. 1201, Col. Centro</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Instituto Newrospine</strong>
-                <span>Hacienda Vegil 102, Cons. 107</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Horario</strong>
-                <span>Lun–Vie 9–19 h · Sáb 9–14 h</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Seguro</strong>
-                <span>Inbursa · Pago particular</span>
-              </div>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Condiciones relacionadas</h4>
-              <ul class="sidebar-links">
-                <li><a href="../espondilolistesis/">Espondilolistesis</a></li>
-                <li><a href="../estenosis-lumbar/">Estenosis lumbar</a></li>
-                <li><a href="../artrodesis/">Artrodesis de columna</a></li>
-                <li><a href="../">Ver todas las condiciones</a></li>
-              </ul>
-            </div>
-          </aside>
-
-        </div>
-
-    <!-- Banda visual: foto de sintoma de fondo -->
-    <section class="img-band" style="background-image: url('../../img/escoliosis-curvatura-columna-queretaro.webp');" aria-label="Curvatura de la columna en escoliosis">
-      <div class="img-band__inner">
-        <p>«Una columna que se desvía de su eje no siempre duele al principio, pero detectarla a tiempo cambia por completo el tratamiento.»</p>
-        <cite>Dr. Carlos Mendoza · Neurocirujano de columna</cite>
       </div>
-    </section>
+
+    </article>
+
+    <section class="content-section">
+      <div class="container">
 
         <div class="faq-section reveal">
           <h2 class="section-title-center">Preguntas frecuentes sobre escoliosis</h2>

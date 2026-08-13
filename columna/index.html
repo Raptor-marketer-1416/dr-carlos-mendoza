@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap">
-  <link rel="stylesheet" href="../css/styles.css?v=28">
+  <link rel="stylesheet" href="../css/styles.css?v=29">
   <link rel="icon" href="../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <script type="application/ld+json">
@@ -167,16 +167,17 @@
       </div>
     </section>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <section class="section">
-      <div class="container content-sidebar">
+    <!-- CONTENIDO EDITORIAL -->
+    <article class="article-ed" aria-label="Información sobre cirugía de columna en Querétaro">
 
-        <!-- Contenido -->
-        <article class="richtext" aria-label="Información sobre cirugía de columna">
-          <p><strong>El Dr. Carlos Mendoza es el especialista en columna vertebral en Querétaro</strong> con mayor enfoque en técnicas de mínima invasión. Su formación en UNAM, Hospital General de México y rotaciones en Brasil y EUA le permite ofrecer los procedimientos de columna más avanzados disponibles hoy.</p>
+      <div class="ed-read richtext">
+        <p style="font-size: var(--text-lg);"><strong>El Dr. Carlos Mendoza es el especialista en columna vertebral en Querétaro</strong> con mayor enfoque en técnicas de mínima invasión. Su formación en UNAM, Hospital General de México y rotaciones en Brasil y EUA le permite ofrecer los procedimientos de columna más avanzados disponibles hoy.</p>
+        <p>A diferencia de otros enfoques, el Dr. Mendoza realiza un diagnóstico completo antes de recomendar cualquier procedimiento quirúrgico. La cirugía es siempre el último recurso, no el primero.</p>
+      </div>
 
-          <p>A diferencia de otros enfoques, el Dr. Mendoza realiza un diagnóstico completo antes de recomendar cualquier procedimiento quirúrgico. La cirugía es siempre el último recurso, no el primero.</p>
-
+      <!-- Split: condiciones que trata + FOTO doctor revisando resonancia -->
+      <div class="ed-split">
+        <div class="ed-split__text richtext">
           <h2>¿Qué condiciones de columna trata el Dr. Mendoza?</h2>
           <ul>
             <li><strong>Hernia discal lumbar</strong> — el problema de columna más frecuente. Causa dolor lumbar intenso, ciática y entumecimiento en piernas.</li>
@@ -186,18 +187,21 @@
             <li><strong>Inestabilidad y espondilolistesis</strong> — deslizamiento de vértebras que genera dolor crónico e inestabilidad.</li>
             <li><strong>Enfermedad degenerativa de columna</strong> — desgaste de discos y articulaciones a lo largo del tiempo.</li>
           </ul>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza revisando una resonancia de columna en consulta">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza en consulta revisando una resonancia de columna junto a un paciente.</p>
+          </div>
+        </figure>
+      </div>
 
-          <figure style="margin: 2rem 0;">
-            <div class="img-ph" role="img" aria-label="Especialista en columna vertebral en Querétaro">
-              <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span class="img-ph__label">📷 Aquí va una imagen</span>
-              <p class="img-ph__desc"><strong>Qué mostrar:</strong> El Dr. Mendoza en consulta revisando una resonancia de columna junto a un paciente, o en quirófano; una imagen que transmita 'especialista en columna vertebral en Querétaro'.</p>
-            </div>
-          </figure>
-
+      <!-- Split (rev): mínima invasión + FOTO doctor operando en quirófano -->
+      <div class="ed-split ed-split--rev">
+        <div class="ed-split__text richtext">
           <h2>Cirugía de columna por mínima invasión — mi filosofía</h2>
           <p>La mínima invasión no es una técnica opcional para mí: es el estándar. Siempre que las condiciones del paciente lo permiten, opero a través de incisiones pequeñas con endoscopio o microscopio quirúrgico.</p>
-
           <p><strong>¿Qué significa esto para el paciente?</strong></p>
           <ul>
             <li>Incisiones de menos de 1 cm vs. 5-10 cm en cirugía abierta</li>
@@ -206,18 +210,29 @@
             <li>Alta hospitalaria en 24-48 horas en la mayoría de los casos</li>
             <li>Regreso a actividades en 1-2 semanas (vs. meses con cirugía abierta)</li>
           </ul>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza operando columna en quirófano">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza en quirofano operando columna vertebral por minima invasion.</p>
+          </div>
+        </figure>
+      </div>
 
-          <h2>Procedimientos de columna disponibles en Querétaro</h2>
+      <div class="ed-read richtext">
+        <h2>Procedimientos de columna disponibles en Querétaro</h2>
+        <h3>Cirugía endoscópica de columna lumbar</h3>
+        <p>El Dr. Mendoza realizó formación específica en cirugía endoscópica monoportal y biportal en Colombia (Bogotá, 2024). Esta técnica permite operar hernias lumbares a través de una incisión mínima con visión amplificada en tiempo real.</p>
+        <h3>Cirugía microscópica de columna cervical</h3>
+        <p>Para hernias cervicales que comprimen raíces nerviosas y generan dolor en brazos, hormigueo o pérdida de fuerza en manos. Se opera con microscopio de alta definición para máxima precisión.</p>
+        <h3>Artrodesis (fijación) de columna por mínima invasión</h3>
+        <p>Cuando existe inestabilidad vertebral, la artrodesis fija las vértebras afectadas para eliminar el dolor. La versión mínimamente invasiva usa tornillos percutáneos que no requieren apertura muscular extensa.</p>
+      </div>
 
-          <h3>Cirugía endoscópica de columna lumbar</h3>
-          <p>El Dr. Mendoza realizó formación específica en cirugía endoscópica monoportal y biportal en Colombia (Bogotá, 2024). Esta técnica permite operar hernias lumbares a través de una incisión mínima con visión amplificada en tiempo real.</p>
-
-          <h3>Cirugía microscópica de columna cervical</h3>
-          <p>Para hernias cervicales que comprimen raíces nerviosas y generan dolor en brazos, hormigueo o pérdida de fuerza en manos. Se opera con microscopio de alta definición para máxima precisión.</p>
-
-          <h3>Artrodesis (fijación) de columna por mínima invasión</h3>
-          <p>Cuando existe inestabilidad vertebral, la artrodesis fija las vértebras afectadas para eliminar el dolor. La versión mínimamente invasiva usa tornillos percutáneos que no requieren apertura muscular extensa.</p>
-
+      <!-- Split: cuándo es necesaria la cirugía + FOTO retrato doctor -->
+      <div class="ed-split">
+        <div class="ed-split__text richtext">
           <h2>¿Cuándo es necesaria la cirugía de columna?</h2>
           <p>La cirugía está indicada cuando:</p>
           <ul>
@@ -226,58 +241,18 @@
             <li>Los estudios de imagen muestran compresión severa de la médula o raíces nerviosas</li>
             <li>Hay pérdida de control de esfínteres (urgencia quirúrgica)</li>
           </ul>
-
           <p>Fuera de estos casos, el Dr. Mendoza agota primero las opciones no quirúrgicas.</p>
-        </article>
-
-        <!-- Sidebar -->
-        <aside>
-          <div class="sidebar-card">
-            <h3 class="sidebar-card-title">Agenda tu consulta</h3>
-            <p class="sidebar-card-desc">El Dr. Mendoza revisa tu caso de forma personal. Sin intermediarios.</p>
-            <a href="tel:4423679614" class="btn btn-warm">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.63 4.35 2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Llamar ahora
-            </a>
-            <a href="https://wa.me/524423679614" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="color: white; border-color: rgba(255,255,255,0.3);">
-              WhatsApp
-            </a>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Retrato del Dr. Mendoza en su consultorio">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> retrato del Dr. Mendoza en bata en su consultorio, transmitiendo confianza.</p>
           </div>
-
-          <div class="sidebar-info" style="margin-top: 1rem;">
-            <div class="sidebar-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Hospital H+ Querétaro<br>Torre 1, Consultorio 1201</span>
-            </div>
-            <div class="sidebar-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Lun–Vie: 9:00–21:00<br>Sáb: 9:00–13:00</span>
-            </div>
-            <div class="sidebar-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Acepta Inbursa</span>
-            </div>
-          </div>
-
-          <!-- Condiciones — links internos -->
-          <div style="background: var(--color-bg-alt); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 1rem;">
-            <p style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-sm); color: var(--color-primary); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.08em;">Condiciones</p>
-            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <li><a href="../columna/hernia-discal-lumbar/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Hernia Discal Lumbar</a></li>
-              <li><a href="../columna/ciatica/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Ciática</a></li>
-              <li><a href="../columna/hernia-discal-cervical/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Hernia Discal Cervical</a></li>
-              <li><a href="../columna/estenosis-lumbar/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Estenosis Lumbar</a></li>
-              <li><a href="../columna/dolor-lumbar-cronico/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Dolor Lumbar Crónico</a></li>
-              <li><a href="../columna/espondilolistesis/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Espondilolistesis</a></li>
-              <li><a href="../columna/escoliosis/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Escoliosis</a></li>
-              <li><a href="../columna/fractura-vertebral/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Fractura Vertebral</a></li>
-              <li><a href="../columna/cirugia-endoscopica/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Cirugía Endoscópica de Columna</a></li>
-              <li><a href="../columna/artrodesis/" style="font-size: var(--text-sm); color: var(--color-secondary); display: flex; align-items: center; gap: 0.35rem; transition: color 0.3s;">→ Artrodesis (Fijación Vertebral)</a></li>
-            </ul>
-          </div>
-        </aside>
+        </figure>
       </div>
-    </section>
+
+    </article>
 
     <!-- FAQ -->
     <section class="section section--alt" aria-labelledby="faq-col-heading">

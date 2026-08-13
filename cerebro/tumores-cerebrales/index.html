@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/styles.css?v=28">
+  <link rel="stylesheet" href="../../css/styles.css?v=29">
   <link rel="icon" href="../../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <script type="application/ld+json">
@@ -173,12 +173,14 @@
 
     <section class="content-section">
       <div class="container">
-        <div class="content-sidebar-layout">
+        <article class="article-ed" aria-label="Información sobre tumores cerebrales">
 
-          <article class="richtext" aria-label="Información sobre tumores cerebrales">
+          <div class="ed-read richtext">
+            <p style="font-size: var(--text-lg);"><strong>Un tumor cerebral no siempre significa cáncer, pero siempre requiere un diagnóstico exacto y un plan quirúrgico hecho a medida.</strong> Cada tumor es distinto: un meningioma benigno del ala esfenoidal no se opera igual que un glioma en el área motora ni que un adenoma hipofisario.</p>
+            <p>En Querétaro, el Dr. Carlos Mendoza opera tumores cerebrales con neuronavegación, cirugía con paciente despierto cuando la lesión toca áreas de lenguaje o movimiento, y abordaje endoscópico endonasal para tumores de base de cráneo e hipófisis.</p>
+          </div>
 
-            <p><strong>Un tumor cerebral no siempre significa cáncer, pero siempre requiere un diagnóstico exacto y un plan quirúrgico hecho a medida.</strong> Cada tumor es distinto: un meningioma benigno del ala esfenoidal no se opera igual que un glioma en el área motora ni que un adenoma hipofisario. En Querétaro, el Dr. Carlos Mendoza opera tumores cerebrales con neuronavegación, cirugía con paciente despierto cuando la lesión toca áreas de lenguaje o movimiento, y abordaje endoscópico endonasal para tumores de base de cráneo e hipófisis.</p>
-
+          <div class="ed-read richtext">
             <h2>Tipos de tumores cerebrales más frecuentes</h2>
             <p>No todos los tumores cerebrales se comportan igual. El tipo histológico marca el pronóstico y el tratamiento:</p>
             <ul>
@@ -189,7 +191,9 @@
               <li><strong>Metástasis cerebrales</strong> — tumores que se diseminaron desde otro órgano (pulmón, mama, melanoma).</li>
               <li><strong>Tumores de fosa posterior</strong> — meduloblastomas, ependimomas y hemangioblastomas.</li>
             </ul>
+          </div>
 
+          <div class="ed-read richtext">
             <h2>Síntomas que deben hacer sospechar un tumor cerebral</h2>
             <p>El cerebro tolera el crecimiento lento durante mucho tiempo antes de dar síntomas. Cuando aparecen, suelen ser progresivos:</p>
             <ul>
@@ -201,7 +205,6 @@
               <li>Alteraciones visuales (visión doble, pérdida del campo visual)</li>
               <li>Náuseas y vómito sin relación con alimentos</li>
             </ul>
-
             <div class="alert-box alert-box--warning">
               <strong>Señales de alarma que requieren evaluación urgente</strong>
               <ul>
@@ -211,30 +214,63 @@
                 <li>Deterioro del estado de alerta</li>
               </ul>
             </div>
+          </div>
 
+          <!-- Split: diagnóstico por imagen + DIAGRAMA existente -->
+          <div class="ed-split">
+            <div class="ed-split__text richtext">
+              <h2>Diagnóstico: resonancia magnética con contraste</h2>
+              <p>La resonancia magnética de cráneo con gadolinio es el estudio de referencia. Muestra el tamaño, la localización exacta y la relación del tumor con las áreas críticas del cerebro. Ese mapa es lo que permite planear una cirugía segura con neuronavegación y, cuando la lesión toca áreas de lenguaje o movimiento, con el paciente despierto. En casos seleccionados añadimos:</p>
+              <ul>
+                <li><strong>Resonancia funcional y tractografía</strong> — localiza áreas de lenguaje, movimiento y haces de fibras blancas para planificar el abordaje</li>
+                <li><strong>Espectroscopía por RM</strong> — orienta sobre el grado tumoral antes de la biopsia</li>
+                <li><strong>Angiorresonancia o angiografía</strong> — cuando el tumor es vascular o desplaza vasos mayores</li>
+                <li><strong>PET cerebral</strong> — diferencia tumor activo de cambios por radioterapia previa</li>
+              </ul>
+            </div>
+            <figure class="ed-split__media">
+              <img src="../../img/tumor-cerebral-diagrama-queretaro.webp" alt="Diagrama de tumor cerebral señalado en un corte del cerebro — Dr. Carlos Mendoza, neurocirujano en Querétaro" width="1280" height="720" loading="lazy" decoding="async">
+            </figure>
+          </div>
 
-            <h2>Diagnóstico: resonancia magnética con contraste</h2>
-            <p>La resonancia magnética de cráneo con gadolinio es el estudio de referencia. Muestra el tamaño, localización, relaciones con estructuras críticas y patrón de realce que orienta sobre el tipo de tumor. En casos seleccionados añadimos:</p>
-            <ul>
-              <li><strong>Resonancia funcional y tractografía</strong> — localiza áreas de lenguaje, movimiento y haces de fibras blancas para planificar el abordaje</li>
-              <li><strong>Espectroscopía por RM</strong> — orienta sobre el grado tumoral antes de la biopsia</li>
-              <li><strong>Angiorresonancia o angiografía</strong> — cuando el tumor es vascular o desplaza vasos mayores</li>
-              <li><strong>PET cerebral</strong> — diferencia tumor activo de cambios por radioterapia previa</li>
-            </ul>
+          <!-- Split (rev): neuronavegación + FOTO doctor revisando resonancia en neuronavegación -->
+          <div class="ed-split ed-split--rev">
+            <div class="ed-split__text richtext">
+              <h2>Cirugía con neuronavegación — precisión milimétrica</h2>
+              <p>La neuronavegación fusiona la resonancia del paciente con la posición de los instrumentos en el quirófano. Funciona como un GPS que muestra en tiempo real dónde está la punta del instrumento respecto al tumor. Esto permite:</p>
+              <ul>
+                <li>Planear el abordaje más corto y seguro desde la piel hasta la lesión</li>
+                <li>Evitar vasos y áreas funcionales críticas</li>
+                <li>Confirmar el grado de resección durante la cirugía</li>
+                <li>Reducir el tamaño de la craneotomía — lo necesario, no más</li>
+              </ul>
+            </div>
+            <figure class="ed-split__media">
+              <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza revisando la resonancia en el sistema de neuronavegación">
+                <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+                <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+                <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza revisando la resonancia cerebral con el tumor en el sistema de neuronavegación.</p>
+              </div>
+            </figure>
+          </div>
 
-            <h2>Cirugía con neuronavegación — precisión milimétrica</h2>
-            <p>La neuronavegación fusiona la resonancia del paciente con la posición de los instrumentos en el quirófano. Funciona como un GPS que muestra en tiempo real dónde está la punta del instrumento respecto al tumor. Esto permite:</p>
-            <ul>
-              <li>Planear el abordaje más corto y seguro desde la piel hasta la lesión</li>
-              <li>Evitar vasos y áreas funcionales críticas</li>
-              <li>Confirmar el grado de resección durante la cirugía</li>
-              <li>Reducir el tamaño de la craneotomía — lo necesario, no más</li>
-            </ul>
+          <!-- Split: paciente despierto + FOTO doctor en cirugía -->
+          <div class="ed-split">
+            <div class="ed-split__text richtext">
+              <h2>Cirugía con paciente despierto — cuando el tumor está en área elocuente</h2>
+              <p>Cuando el tumor está cerca de las áreas del lenguaje o del movimiento, la estrategia más segura es operar con el paciente despierto. Durante la parte crítica de la resección, el paciente habla, mueve la mano o lee, mientras el neurocirujano estimula el cerebro para mapear en tiempo real qué zonas controlan qué función. Así se retira el máximo tumor posible preservando la función.</p>
+              <p>El paciente no siente dolor — el cerebro no tiene receptores nociceptivos. La anestesia se maneja "dormido-despierto-dormido" con sedación a medida por un anestesiólogo especializado.</p>
+            </div>
+            <figure class="ed-split__media">
+              <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza en cirugía de tumor cerebral con neuronavegación">
+                <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+                <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+                <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza en cirugía de tumor cerebral con neuronavegación (o cirugía con paciente despierto).</p>
+              </div>
+            </figure>
+          </div>
 
-            <h2>Cirugía con paciente despierto — cuando el tumor está en área elocuente</h2>
-            <p>Cuando el tumor está cerca de las áreas del lenguaje o del movimiento, la estrategia más segura es operar con el paciente despierto. Durante la parte crítica de la resección, el paciente habla, mueve la mano o lee, mientras el neurocirujano estimula el cerebro para mapear en tiempo real qué zonas controlan qué función. Así se retira el máximo tumor posible preservando la función.</p>
-            <p>El paciente no siente dolor — el cerebro no tiene receptores nociceptivos. La anestesia se maneja "dormido-despierto-dormido" con sedación a medida por un anestesiólogo especializado.</p>
-
+          <div class="ed-read richtext">
             <h2>Abordaje endoscópico endonasal — tumores de hipófisis y base de cráneo</h2>
             <p>Para tumores de la silla turca (adenomas hipofisarios), craneofaringiomas y lesiones de base de cráneo anterior, el abordaje por vía nasal con endoscopio ha reemplazado al abordaje transcraneal en la mayoría de los casos. Se accede por las fosas nasales, se atraviesa el seno esfenoidal y se llega a la silla turca — sin cortes visibles, con menor manipulación cerebral y recuperación más rápida.</p>
 
@@ -247,66 +283,9 @@
               <li><strong>Resultado histopatológico</strong> en 7-10 días — define si se requiere radioterapia o quimioterapia complementaria</li>
               <li><strong>Regreso a actividades</strong> entre 4 y 8 semanas según evolución</li>
             </ul>
-
-          </article>
-
-          <aside class="content-aside">
-            <div class="sidebar-card sidebar-card--cta">
-              <p class="sidebar-card-tag">Segunda opinión en tumor cerebral</p>
-              <h3 class="sidebar-card-title">¿Te diagnosticaron un tumor cerebral?</h3>
-              <p class="sidebar-card-desc">Antes de decidir, trae tu resonancia. Te explico qué tipo de tumor es, qué opciones existen y cuál es la estrategia quirúrgica con mejor pronóstico en tu caso.</p>
-              <a href="tel:4423679614" class="btn btn-warm btn-full">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                442 367-9614
-              </a>
-              <a href="https://wa.me/524423679614?text=Hola%2C%20tengo%20una%20resonancia%20con%20posible%20tumor%20cerebral%20y%20quisiera%20una%20segunda%20opini%C3%B3n." class="btn btn-outline btn-full" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Consultorios</h4>
-              <div class="sidebar-info-item">
-                <strong>Hospital H+ Querétaro</strong>
-                <span>Priv. Ignacio Zaragoza 16A, Torre 1, Cons. 1201, Col. Centro</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Instituto Newrospine</strong>
-                <span>Hacienda Vegil 102, Cons. 107</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Horario</strong>
-                <span>Lun–Vie 9–19 h · Sáb 9–14 h</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Seguro</strong>
-                <span>Inbursa · Pago particular</span>
-              </div>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Cirugía cerebral — otras condiciones</h4>
-              <ul class="sidebar-links">
-                <li><a href="../aneurisma-cerebral/">Aneurisma cerebral</a></li>
-                <li><a href="../hematoma-subdural/">Hematoma subdural</a></li>
-                <li><a href="../traumatismo-craneoencefalico/">Traumatismo craneoencefálico</a></li>
-                <li><a href="../">Ver cirugía cerebral</a></li>
-              </ul>
-            </div>
-          </aside>
-
-        </div>
-
-        <div class="img-showcase">
-          <div class="img-showcase__grid">
-            <div>
-              <span class="section-tag">Diagnóstico por imagen</span>
-              <h2>La imagen define el plan quirúrgico</h2>
-              <p>La resonancia magnética con contraste muestra el tamaño, la localización exacta y la relación del tumor con las áreas críticas del cerebro. Ese mapa es lo que permite planear una cirugía segura con neuronavegación y, cuando la lesión toca áreas de lenguaje o movimiento, con el paciente despierto.</p>
-            </div>
-            <figure style="margin:0;">
-              <img src="../../img/tumor-cerebral-diagrama-queretaro.webp" alt="Diagrama de tumor cerebral señalado en corte axial — neurocirugía en Querétaro" width="1280" height="720" loading="lazy" decoding="async">
-            </figure>
           </div>
-        </div>
+
+        </article>
 
         <div class="faq-section reveal">
           <h2 class="section-title-center">Preguntas frecuentes sobre tumores cerebrales</h2>

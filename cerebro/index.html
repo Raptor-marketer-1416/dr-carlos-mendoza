@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap">
-  <link rel="stylesheet" href="../css/styles.css?v=28">
+  <link rel="stylesheet" href="../css/styles.css?v=29">
   <link rel="icon" href="../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <script type="application/ld+json">
@@ -169,16 +169,17 @@
       </div>
     </section>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <section class="section">
-      <div class="container content-sidebar">
+    <!-- CONTENIDO EDITORIAL -->
+    <article class="article-ed" aria-label="Información sobre cirugía cerebral">
 
-        <!-- Contenido -->
-        <article class="richtext" aria-label="Información sobre cirugía cerebral">
-          <p><strong>El Dr. Carlos Mendoza es neurocirujano especialista en cirugía cerebral en Querétaro</strong>. Opera tumores, aneurismas, hematomas y traumatismos craneoencefálicos con las técnicas más avanzadas disponibles hoy: neuronavegación, microscopía quirúrgica, endoscopía endonasal y cirugía con paciente despierto en casos seleccionados.</p>
+      <div class="ed-read richtext">
+        <p style="font-size: var(--text-lg);"><strong>El Dr. Carlos Mendoza es neurocirujano especialista en cirugía cerebral en Querétaro.</strong> Opera tumores, aneurismas, hematomas y traumatismos craneoencefálicos con las técnicas más avanzadas disponibles hoy: neuronavegación, microscopía quirúrgica, endoscopía endonasal y cirugía con paciente despierto en casos seleccionados.</p>
+        <p>Certificado por el Consejo Mexicano de Cirugía Neurológica y con formación en UNAM, Hospital General de México y rotaciones internacionales en Brasil, EUA y Colombia, el Dr. Mendoza ofrece un enfoque que prioriza la preservación de función neurológica: cada decisión quirúrgica se toma con el objetivo de que el paciente recupere su vida.</p>
+      </div>
 
-          <p>Certificado por el Consejo Mexicano de Cirugía Neurológica y con formación en UNAM, Hospital General de México y rotaciones internacionales en Brasil, EUA y Colombia, el Dr. Mendoza ofrece un enfoque que prioriza la preservación de función neurológica: cada decisión quirúrgica se toma con el objetivo de que el paciente recupere su vida.</p>
-
+      <!-- Split: patologías que trata + FOTO retrato del doctor -->
+      <div class="ed-split">
+        <div class="ed-split__text richtext">
           <h2>¿Qué patologías cerebrales trata el Dr. Mendoza?</h2>
           <ul>
             <li><strong><a href="tumores-cerebrales/">Tumores cerebrales</a></strong> — gliomas, meningiomas, metástasis y otros tumores del cerebro y cráneo.</li>
@@ -189,30 +190,45 @@
             <li><strong>Movimientos anormales (Parkinson)</strong> — evaluación quirúrgica para estimulación cerebral profunda.</li>
             <li><strong>Epilepsia farmacorresistente</strong> — evaluación quirúrgica en casos seleccionados.</li>
           </ul>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Retrato del Dr. Carlos Mendoza, neurocirujano en Querétaro">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> retrato del Dr. Mendoza en bata quirúrgica, transmitiendo autoridad y confianza.</p>
+          </div>
+        </figure>
+      </div>
 
-          <figure style="margin: 2rem 0;">
-            <div class="img-ph" role="img" aria-label="Dr. Mendoza especialista en cirugía cerebral">
-              <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span class="img-ph__label">📷 Aquí va una imagen</span>
-              <p class="img-ph__desc"><strong>Qué mostrar:</strong> El Dr. Mendoza en un quirófano de neurocirugía o revisando una resonancia cerebral; una imagen que transmita 'especialista en cirugía cerebral en Querétaro'.</p>
-            </div>
-          </figure>
-
+      <!-- Split (rev): técnicas avanzadas + FOTO doctor operando -->
+      <div class="ed-split ed-split--rev">
+        <div class="ed-split__text richtext">
           <h2>Técnicas avanzadas en cirugía cerebral</h2>
           <p>La cirugía del cerebro no tolera el error. Cada milímetro importa. Por eso uso las tecnologías que más precisión permiten:</p>
-
           <h3>Neuronavegación</h3>
           <p>Un sistema de GPS quirúrgico que toma la resonancia del paciente y guía la operación en tiempo real. Permite llegar a lesiones profundas con incisiones mínimas y preservar tejido cerebral sano. Es el estándar en cirugía moderna de tumores cerebrales.</p>
-
           <h3>Cirugía con paciente despierto</h3>
           <p>Para tumores ubicados cerca de áreas del lenguaje o motrices, operar con el paciente despierto permite mapear en tiempo real qué tejido cerebral es funcional y cuál puede retirarse con seguridad. La técnica requiere anestesia y monitoreo especializados.</p>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza operando en quirófano con microscopio y neuronavegación">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza en quirófano de neurocirugía operando con microscopio y neuronavegación.</p>
+          </div>
+        </figure>
+      </div>
 
-          <h3>Cirugía endoscópica endonasal</h3>
-          <p>Para tumores de la base del cráneo, glándula pituitaria o clivus, la vía endoscópica endonasal permite operar sin abrir el cráneo. Se accede al tumor a través de la nariz con un endoscopio. Recuperación notablemente más rápida.</p>
+      <div class="ed-read richtext">
+        <h3>Cirugía endoscópica endonasal</h3>
+        <p>Para tumores de la base del cráneo, glándula pituitaria o clivus, la vía endoscópica endonasal permite operar sin abrir el cráneo. Se accede al tumor a través de la nariz con un endoscopio. Recuperación notablemente más rápida.</p>
+        <h3>Microscopía quirúrgica</h3>
+        <p>Microscopio de alta definición con iluminación xenón para cirugía de aneurismas, tumores pequeños y lesiones vasculares. Amplifica el campo hasta 20 veces y permite disección con precisión submilimétrica.</p>
+      </div>
 
-          <h3>Microscopía quirúrgica</h3>
-          <p>Microscopio de alta definición con iluminación xenón para cirugía de aneurismas, tumores pequeños y lesiones vasculares. Amplifica el campo hasta 20 veces y permite disección con precisión submilimétrica.</p>
-
+      <!-- Split: cuándo consultar + FOTO doctor revisando resonancia en consulta -->
+      <div class="ed-split">
+        <div class="ed-split__text richtext">
           <h2>¿Cuándo consultar a un neurocirujano cerebral?</h2>
           <p>No toda molestia neurológica requiere cirugía. Pero estos son síntomas que justifican evaluación por un neurocirujano:</p>
           <ul>
@@ -225,50 +241,17 @@
             <li>Traumatismo craneoencefálico con pérdida de conciencia o déficit neurológico</li>
           </ul>
           <p>Si tienes alguno de estos síntomas y no sabes a qué especialista acudir, envíame tu resonancia o tomografía por WhatsApp y te oriento.</p>
-        </article>
-
-        <!-- Sidebar -->
-        <aside>
-          <div class="sidebar-card">
-            <h3 class="sidebar-card-title">Agenda tu consulta</h3>
-            <p class="sidebar-card-desc">Evaluación personal del Dr. Mendoza. Envía tus estudios previos y aclaremos tu caso.</p>
-            <a href="tel:4423679614" class="btn btn-warm">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.63 4.35 2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Llamar ahora
-            </a>
-            <a href="https://wa.me/524423679614" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="color: white; border-color: rgba(255,255,255,0.3);">
-              WhatsApp
-            </a>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza revisando una resonancia cerebral con un paciente en consulta">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza revisando una resonancia cerebral con un paciente en consulta.</p>
           </div>
-
-          <div class="sidebar-info" style="margin-top: 1rem;">
-            <div class="sidebar-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Hospital H+ Querétaro<br>Torre 1, Consultorio 1201</span>
-            </div>
-            <div class="sidebar-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Lun–Vie: 9:00–21:00<br>Sáb: 9:00–13:00</span>
-            </div>
-            <div class="sidebar-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Acepta Inbursa</span>
-            </div>
-          </div>
-
-          <!-- Patologías — links internos -->
-          <div style="background: var(--color-bg-alt); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 1rem;">
-            <p style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-sm); color: var(--color-primary); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.08em;">Patologías</p>
-            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <li><a href="tumores-cerebrales/" style="font-size: var(--text-sm); color: var(--color-secondary);">→ Tumores cerebrales</a></li>
-              <li><a href="aneurisma-cerebral/" style="font-size: var(--text-sm); color: var(--color-secondary);">→ Aneurisma cerebral</a></li>
-              <li><a href="hematoma-subdural/" style="font-size: var(--text-sm); color: var(--color-secondary);">→ Hematoma subdural</a></li>
-              <li><a href="traumatismo-craneoencefalico/" style="font-size: var(--text-sm); color: var(--color-secondary);">→ Traumatismo craneoencefálico</a></li>
-            </ul>
-          </div>
-        </aside>
+        </figure>
       </div>
-    </section>
+
+    </article>
 
     <!-- FAQ -->
     <section class="section section--alt" aria-labelledby="faq-cer-heading">

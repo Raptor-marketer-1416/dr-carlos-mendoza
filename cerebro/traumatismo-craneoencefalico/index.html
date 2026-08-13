@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/styles.css?v=28">
+  <link rel="stylesheet" href="../../css/styles.css?v=29">
   <link rel="icon" href="../../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <script type="application/ld+json">
@@ -174,45 +174,80 @@
 
     <section class="content-section">
       <div class="container">
-        <div class="content-sidebar-layout">
+        <article class="article-ed" aria-label="Información sobre traumatismo craneoencefálico">
 
-          <article class="richtext" aria-label="Información sobre traumatismo craneoencefálico">
+          <div class="ed-read richtext">
+            <p style="font-size: var(--text-lg);"><strong>Un golpe en la cabeza puede parecer inofensivo — hasta que deja de serlo.</strong> El traumatismo craneoencefálico (TCE) cubre un espectro muy amplio, desde la conmoción sin secuelas hasta el politrauma grave con riesgo vital. Lo crítico es saber cuándo vigilar en casa, cuándo pedir una tomografía y cuándo operar.</p>
+            <p>En Querétaro, el Dr. Carlos Mendoza atiende el TCE como neurocirujano: evaluación clínica rigurosa, imagen dirigida y decisión quirúrgica oportuna cuando hay hematomas, fracturas con hundimiento o edema cerebral.</p>
+          </div>
 
-            <p><strong>Un golpe en la cabeza puede parecer inofensivo — hasta que deja de serlo.</strong> El traumatismo craneoencefálico (TCE) cubre un espectro muy amplio, desde la conmoción sin secuelas hasta el politrauma grave con riesgo vital. Lo crítico es saber cuándo vigilar en casa, cuándo pedir una tomografía y cuándo operar. En Querétaro, el Dr. Carlos Mendoza atiende TCE como neurocirujano: evaluación clínica rigurosa, imagen dirigida y decisión quirúrgica oportuna cuando hay hematomas, fracturas hundimiento o edema cerebral.</p>
+          <!-- Split: clasificación de Glasgow + FOTO doctor valorando en urgencias -->
+          <div class="ed-split">
+            <div class="ed-split__text richtext">
+              <h2>Clasificación del TCE — la escala de Glasgow</h2>
+              <p>El TCE se clasifica por la escala de coma de Glasgow (GCS), que evalúa apertura ocular, respuesta verbal y respuesta motora. A mayor puntuación, mejor estado neurológico:</p>
+              <ul>
+                <li><strong>TCE leve</strong> — GCS 13-15. Conmoción o contusión menor. Es la forma más frecuente.</li>
+                <li><strong>TCE moderado</strong> — GCS 9-12. Hay lesión cerebral demostrable en imagen en muchos casos.</li>
+                <li><strong>TCE severo</strong> — GCS 3-8. Coma, requiere UCI, manejo de vía aérea y monitoreo de presión intracraneal.</li>
+              </ul>
+            </div>
+            <figure class="ed-split__media">
+              <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza valorando a un paciente en urgencias">
+                <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+                <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+                <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza valorando en urgencias a un paciente con traumatismo craneal (evaluación neurológica).</p>
+              </div>
+            </figure>
+          </div>
 
-            <h2>Clasificación del TCE — la escala de Glasgow</h2>
-            <p>El TCE se clasifica por la escala de coma de Glasgow (GCS), que evalúa apertura ocular, respuesta verbal y respuesta motora. A mayor puntuación, mejor estado neurológico:</p>
-            <ul>
-              <li><strong>TCE leve</strong> — GCS 13-15. Conmoción o contusión menor. Es la forma más frecuente.</li>
-              <li><strong>TCE moderado</strong> — GCS 9-12. Hay lesión cerebral demostrable en imagen en muchos casos.</li>
-              <li><strong>TCE severo</strong> — GCS 3-8. Coma, requiere UCI, manejo de vía aérea y monitoreo de presión intracraneal.</li>
-            </ul>
+          <!-- Split (rev): lesiones postraumáticas + DIAGRAMA real de lesión cerebral -->
+          <div class="ed-split ed-split--rev">
+            <div class="ed-split__text richtext">
+              <h2>Lesiones postraumáticas más frecuentes</h2>
+              <p>El impacto puede dañar el cerebro de varias formas, desde alteraciones sin lesión visible hasta sangrados que exigen cirugía inmediata:</p>
+              <ul>
+                <li><strong>Conmoción cerebral</strong> — alteración transitoria de la función sin lesión visible.</li>
+                <li><strong>Contusión cerebral</strong> — machucamiento del tejido, visible como hemorragia pequeña en TAC.</li>
+                <li><strong>Hematoma epidural</strong> — sangre entre cráneo y duramadre, típicamente por rotura de la arteria meníngea media. Urgencia quirúrgica.</li>
+                <li><strong>Hematoma subdural agudo</strong> — sangre entre duramadre y cerebro por rotura de venas puente.</li>
+                <li><strong>Hemorragia subaracnoidea traumática</strong> — sangre en el espacio entre aracnoides y piamadre.</li>
+                <li><strong>Lesión axonal difusa</strong> — lesión de fibras por aceleración-desaceleración; puede ser grave con TAC casi normal.</li>
+                <li><strong>Fractura craneal lineal o con hundimiento</strong> — puede requerir cirugía si comprime el cerebro o expone la duramadre.</li>
+              </ul>
+            </div>
+            <figure class="ed-split__media">
+              <img src="../../img/traumatismo-craneoencefalico-lesion-queretaro.webp" alt="Diagrama de lesión cerebral por traumatismo craneoencefálico — Dr. Carlos Mendoza, Querétaro" width="1280" height="720" loading="lazy" decoding="async">
+            </figure>
+          </div>
 
-            <h2>Lesiones postraumáticas más frecuentes</h2>
-            <ul>
-              <li><strong>Conmoción cerebral</strong> — alteración transitoria de la función sin lesión visible</li>
-              <li><strong>Contusión cerebral</strong> — machucamiento del tejido, visible como hemorragia pequeña en TAC</li>
-              <li><strong>Hematoma epidural</strong> — sangre entre cráneo y duramadre, típicamente por rotura de arteria meníngea media. Urgencia quirúrgica</li>
-              <li><strong>Hematoma subdural agudo</strong> — sangre entre duramadre y cerebro por rotura de venas puente</li>
-              <li><strong>Hemorragia subaracnoidea traumática</strong> — sangre en el espacio entre aracnoides y piamadre</li>
-              <li><strong>Lesión axonal difusa</strong> — lesión de fibras por aceleración-desaceleración, puede ser grave con TAC casi normal</li>
-              <li><strong>Fractura craneal lineal o con hundimiento</strong> — puede requerir cirugía si comprime el cerebro o expone duramadre</li>
-            </ul>
+          <!-- Split: cuándo hacer tomografía + FOTO doctor revisando el TAC -->
+          <div class="ed-split">
+            <div class="ed-split__text richtext">
+              <h2>Cuándo hacer tomografía tras un TCE</h2>
+              <p>Tras un golpe en la cabeza, la tomografía muestra si hay contusión, sangrado o inflamación del cerebro. Ese estudio, junto con la exploración neurológica, define si el paciente necesita vigilancia o cirugía urgente. No todo golpe requiere tomografía, pero hay criterios claros que obligan a hacerla:</p>
+              <ul>
+                <li>Pérdida de conciencia, aunque haya sido breve.</li>
+                <li>Amnesia del evento o de eventos previos.</li>
+                <li>Vómito repetido tras el trauma.</li>
+                <li>Cefalea intensa que no cede.</li>
+                <li>Crisis convulsiva postraumática.</li>
+                <li>Sospecha de fractura de base de cráneo (equimosis retroauricular, ojos de mapache, salida de líquido claro por nariz u oído).</li>
+                <li>Mecanismo de alta energía (accidente vehicular, caída desde altura).</li>
+                <li>Edad mayor de 65 años o uso de anticoagulantes.</li>
+                <li>Intoxicación que dificulte la exploración neurológica.</li>
+              </ul>
+            </div>
+            <figure class="ed-split__media">
+              <div class="img-ph img-ph--doctor" role="img" aria-label="Dr. Mendoza revisando el TAC de cráneo en la pantalla">
+                <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+                <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+                <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza revisando el TAC de cráneo del trauma en la pantalla.</p>
+              </div>
+            </figure>
+          </div>
 
-            <h2>Cuándo hacer tomografía tras un TCE</h2>
-            <p>No todo golpe requiere tomografía, pero hay criterios claros que obligan a hacerla:</p>
-            <ul>
-              <li>Pérdida de conciencia, aunque haya sido breve</li>
-              <li>Amnesia del evento o de eventos previos</li>
-              <li>Vómito repetido tras el trauma</li>
-              <li>Cefalea intensa que no cede</li>
-              <li>Crisis convulsiva postraumática</li>
-              <li>Sospecha de fractura de base de cráneo (equimosis retroauricular, ojos de mapache, salida de líquido claro por nariz u oído)</li>
-              <li>Mecanismo de alta energía (accidente vehicular, caída desde altura)</li>
-              <li>Edad mayor de 65 años o uso de anticoagulantes</li>
-              <li>Intoxicación que dificulte la exploración neurológica</li>
-            </ul>
-
+          <div class="ed-read richtext">
             <div class="alert-box alert-box--warning">
               <strong>Signos de alarma tras un golpe en la cabeza — acude inmediatamente a urgencias</strong>
               <ul>
@@ -223,95 +258,40 @@
                 <li>Cefalea progresivamente peor</li>
                 <li>Salida de líquido claro por oído o nariz</li>
                 <li>Crisis convulsiva</li>
-                <li>Somnolencia progresiva, dificultad para mantener despierto</li>
+                <li>Somnolencia progresiva, dificultad para mantenerse despierto</li>
               </ul>
             </div>
 
             <h2>Tratamiento según gravedad</h2>
             <h3>TCE leve sin lesión en imagen</h3>
-            <p>Observación domiciliaria con pautas claras: alguien que vigile, regresar si aparece alarma. Reposo cognitivo (reducir pantallas, lectura intensa, trabajo mental) durante los primeros días. Control en consulta a los 7-10 días.</p>
+            <p>Observación domiciliaria con pautas claras: alguien que vigile y regresar si aparece un signo de alarma. Reposo cognitivo (reducir pantallas, lectura intensa y trabajo mental) durante los primeros días. Control en consulta a los 7-10 días.</p>
 
             <h3>TCE con lesión en imagen que no requiere cirugía</h3>
             <p>Hospitalización con vigilancia neurológica y tomografía de control a las 6-24 horas para descartar progresión. Analgesia, control de crisis y manejo de la presión arterial.</p>
 
             <h3>TCE con indicación quirúrgica</h3>
             <ul>
-              <li><strong>Hematoma epidural</strong> mayor de 30 ml o con efecto de masa — craneotomía evacuadora urgente</li>
-              <li><strong>Hematoma subdural agudo</strong> grueso con desviación de línea media — craneotomía evacuadora</li>
-              <li><strong>Contusión cerebral temporal</strong> con edema expansivo — evacuación o craniectomía descompresiva</li>
-              <li><strong>Fractura con hundimiento</strong> mayor al grosor del cráneo — elevación quirúrgica</li>
-              <li><strong>Edema cerebral refractario</strong> al tratamiento médico — craniectomía descompresiva</li>
+              <li><strong>Hematoma epidural</strong> mayor de 30 ml o con efecto de masa — craneotomía evacuadora urgente.</li>
+              <li><strong>Hematoma subdural agudo</strong> grueso con desviación de línea media — craneotomía evacuadora.</li>
+              <li><strong>Contusión cerebral temporal</strong> con edema expansivo — evacuación o craniectomía descompresiva.</li>
+              <li><strong>Fractura con hundimiento</strong> mayor al grosor del cráneo — elevación quirúrgica.</li>
+              <li><strong>Edema cerebral refractario</strong> al tratamiento médico — craniectomía descompresiva.</li>
             </ul>
+          </div>
 
+          <div class="ed-read richtext">
             <h2>Rehabilitación postraumática</h2>
             <p>El cerebro tiene capacidad de reorganizarse (neuroplasticidad). Un programa de rehabilitación temprano e integral es determinante en los resultados:</p>
             <ul>
-              <li><strong>Rehabilitación física</strong> para déficit motor</li>
-              <li><strong>Terapia de lenguaje</strong> en caso de afasia o disartria</li>
-              <li><strong>Rehabilitación cognitiva</strong> para memoria, atención y funciones ejecutivas</li>
-              <li><strong>Apoyo psicológico</strong> — la ansiedad y depresión postraumáticas son frecuentes y tratables</li>
-              <li>Seguimiento neurológico regular en los primeros 12 meses</li>
+              <li><strong>Rehabilitación física</strong> para el déficit motor.</li>
+              <li><strong>Terapia de lenguaje</strong> en caso de afasia o disartria.</li>
+              <li><strong>Rehabilitación cognitiva</strong> para memoria, atención y funciones ejecutivas.</li>
+              <li><strong>Apoyo psicológico</strong> — la ansiedad y la depresión postraumáticas son frecuentes y tratables.</li>
+              <li>Seguimiento neurológico regular en los primeros 12 meses.</li>
             </ul>
-
-          </article>
-
-          <aside class="content-aside">
-            <div class="sidebar-card sidebar-card--cta">
-              <p class="sidebar-card-tag">Evaluación tras golpe en la cabeza</p>
-              <h3 class="sidebar-card-title">¿Recibiste un golpe fuerte en la cabeza?</h3>
-              <p class="sidebar-card-desc">Si te quedan síntomas o quieres una evaluación profesional, trae tu tomografía. Te explico qué hay, qué riesgo existe y qué necesitas vigilar.</p>
-              <a href="tel:4423679614" class="btn btn-warm btn-full">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                442 367-9614
-              </a>
-              <a href="https://wa.me/524423679614?text=Hola%2C%20tuve%20un%20golpe%20en%20la%20cabeza%20y%20quisiera%20una%20evaluaci%C3%B3n%20neuroquir%C3%BArgica." class="btn btn-outline btn-full" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Consultorios</h4>
-              <div class="sidebar-info-item">
-                <strong>Hospital H+ Querétaro</strong>
-                <span>Priv. Ignacio Zaragoza 16A, Torre 1, Cons. 1201, Col. Centro</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Instituto Newrospine</strong>
-                <span>Hacienda Vegil 102, Cons. 107</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Horario</strong>
-                <span>Lun–Vie 9–19 h · Sáb 9–14 h</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Seguro</strong>
-                <span>Inbursa · Pago particular</span>
-              </div>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Cirugía cerebral — otras condiciones</h4>
-              <ul class="sidebar-links">
-                <li><a href="../tumores-cerebrales/">Tumores cerebrales</a></li>
-                <li><a href="../aneurisma-cerebral/">Aneurisma cerebral</a></li>
-                <li><a href="../hematoma-subdural/">Hematoma subdural</a></li>
-                <li><a href="../">Ver cirugía cerebral</a></li>
-              </ul>
-            </div>
-          </aside>
-
-        </div>
-
-        <div class="img-showcase">
-          <div class="img-showcase__grid">
-            <div>
-              <span class="section-tag">Diagnóstico por imagen</span>
-              <h2>La tomografía define la gravedad</h2>
-              <p>Tras un golpe en la cabeza, la tomografía muestra si hay contusión, sangrado o inflamación del cerebro. Ese estudio, junto con la exploración neurológica, define si el paciente necesita vigilancia o cirugía urgente.</p>
-            </div>
-            <figure style="margin:0;">
-              <img src="../../img/traumatismo-craneoencefalico-lesion-queretaro.webp" alt="Diagrama de lesión cerebral por traumatismo craneoencefálico — Dr. Carlos Mendoza, Querétaro" width="1280" height="720" loading="lazy" decoding="async">
-            </figure>
           </div>
-        </div>
+
+        </article>
 
         <div class="faq-section reveal">
           <h2 class="section-title-center">Preguntas frecuentes sobre TCE</h2>

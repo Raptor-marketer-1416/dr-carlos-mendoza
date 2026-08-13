@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/styles.css?v=28">
+  <link rel="stylesheet" href="../../css/styles.css?v=29">
   <link rel="icon" href="../../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <script type="application/ld+json">
@@ -169,14 +169,26 @@
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="container">
-        <div class="content-sidebar-layout">
+    <!-- CONTENIDO EDITORIAL -->
+    <article class="article-ed" aria-label="Información sobre hematoma subdural">
 
-          <article class="richtext" aria-label="Información sobre hematoma subdural">
+      <div class="ed-read richtext">
 
             <p><strong>El hematoma subdural es la acumulación de sangre entre la duramadre y el cerebro.</strong> Es una de las urgencias neuroquirúrgicas más frecuentes, sobre todo en adultos mayores. A veces aparece tras un golpe importante, pero en otras ocasiones el paciente ni siquiera recuerda el trauma — solo llegan los síntomas de confusión, pérdida de fuerza o somnolencia semanas después. En Querétaro, el Dr. Carlos Mendoza maneja el hematoma subdural agudo como urgencia y el crónico con técnicas de drenaje mínimamente invasivas que permiten una recuperación muy rápida.</p>
+      </div>
 
+      <!-- Split: qué pasa por dentro + DIAGRAMA (imagen real existente) -->
+      <div class="ed-split">
+        <div class="ed-split__text richtext">
+          <h2>Qué pasa por dentro: sangre que comprime el cerebro</h2>
+          <p>En el hematoma subdural, la sangre se acumula entre el cerebro y sus cubiertas y lo desplaza, formando la típica media luna. Según el tamaño y los síntomas, se resuelve drenándolo a través de pequeños orificios en el cráneo.</p>
+        </div>
+        <figure class="ed-split__media">
+          <img src="../../img/hematoma-subdural-cerebro-queretaro.webp" alt="Diagrama de hematoma subdural en forma de media luna que comprime el cerebro — Dr. Carlos Mendoza, Querétaro" width="1280" height="720" loading="lazy" decoding="async">
+        </figure>
+      </div>
+
+      <div class="ed-read richtext">
             <h2>Tipos de hematoma subdural</h2>
             <h3>Hematoma subdural agudo</h3>
             <p>Aparece en las primeras 72 horas tras un trauma importante (accidente de tránsito, caída desde altura, asalto). La sangre es fresca y aumenta de volumen rápidamente, comprimiendo el cerebro. Es una urgencia quirúrgica que requiere craneotomía evacuadora. El pronóstico depende del estado neurológico al llegar al hospital y del tiempo hasta la cirugía.</p>
@@ -205,21 +217,47 @@
               <strong>En adulto mayor, ante deterioro cognitivo reciente, hay que descartar hematoma subdural</strong>
               <p>Si un adulto mayor presenta confusión, debilidad de un lado o cambios de conducta en semanas — especialmente si toma anticoagulantes o tuvo una caída reciente — una tomografía de cráneo es obligada antes de asumir demencia u otro diagnóstico.</p>
             </div>
+      </div>
 
-            <h2>Diagnóstico</h2>
-            <p>La tomografía simple de cráneo muestra el hematoma con claridad. La diferencia entre agudo y crónico se establece por la densidad: el agudo se ve blanco (hiperdenso), el crónico se ve negro (hipodenso) y el subagudo es intermedio.</p>
-            <p>En casos con datos neurológicos importantes, una resonancia magnética aporta información sobre membranas, compartimentación y edema cerebral asociado.</p>
+      <!-- Split (rev): diagnóstico + FOTO doctor viendo el TAC -->
+      <div class="ed-split ed-split--rev">
+        <div class="ed-split__text richtext">
+          <h2>Diagnóstico</h2>
+          <p>La tomografía simple de cráneo muestra el hematoma con claridad. La diferencia entre agudo y crónico se establece por la densidad: el agudo se ve blanco (hiperdenso), el crónico se ve negro (hipodenso) y el subagudo es intermedio.</p>
+          <p>En casos con datos neurológicos importantes, una resonancia magnética aporta información sobre membranas, compartimentación y edema cerebral asociado.</p>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="El Dr. Mendoza viendo el TAC de cráneo con el hematoma subdural">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza viendo el TAC de craneo con el hematoma subdural</p>
+          </div>
+        </figure>
+      </div>
 
-            <h2>Tratamiento quirúrgico</h2>
-            <h3>Drenaje por trépanos (hematoma subdural crónico)</h3>
-            <p>Es la técnica estándar. Se hacen uno o dos orificios pequeños en el cráneo, se rompe la duramadre, y se drena la sangre licuada. Después se deja un drenaje por 24-48 horas para que el cerebro reexpanda el espacio. La mejoría neurológica suele ser rápida — muchos pacientes notan mejoría el mismo día.</p>
-            <ul>
-              <li><strong>Anestesia:</strong> local + sedación o general</li>
-              <li><strong>Tiempo quirúrgico:</strong> 40-60 minutos</li>
-              <li><strong>Hospitalización:</strong> 2-4 días</li>
-              <li><strong>Regreso a actividades:</strong> 2-3 semanas</li>
-            </ul>
+      <!-- Split: tratamiento / drenaje por trépanos + FOTO doctor drenando -->
+      <div class="ed-split">
+        <div class="ed-split__text richtext">
+          <h2>Tratamiento quirúrgico</h2>
+          <h3>Drenaje por trépanos (hematoma subdural crónico)</h3>
+          <p>Es la técnica estándar. Se hacen uno o dos orificios pequeños en el cráneo, se rompe la duramadre, y se drena la sangre licuada. Después se deja un drenaje por 24-48 horas para que el cerebro reexpanda el espacio. La mejoría neurológica suele ser rápida — muchos pacientes notan mejoría el mismo día.</p>
+          <ul>
+            <li><strong>Anestesia:</strong> local + sedación o general</li>
+            <li><strong>Tiempo quirúrgico:</strong> 40-60 minutos</li>
+            <li><strong>Hospitalización:</strong> 2-4 días</li>
+            <li><strong>Regreso a actividades:</strong> 2-3 semanas</li>
+          </ul>
+        </div>
+        <figure class="ed-split__media">
+          <div class="img-ph img-ph--doctor" role="img" aria-label="El Dr. Mendoza drenando el hematoma subdural por trépano, mínima invasión">
+            <svg class="img-ph__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+            <span class="img-ph__label">📷 FOTO DEL DOCTOR</span>
+            <p class="img-ph__desc"><strong>Foto:</strong> el Dr. Mendoza drenando el hematoma subdural por trepano (minima invasion)</p>
+          </div>
+        </figure>
+      </div>
 
+      <div class="ed-read richtext">
             <h3>Craneotomía evacuadora (hematoma subdural agudo)</h3>
             <p>Cuando el hematoma es agudo, la sangre está sólida y no se puede drenar por trépanos. Se requiere una craneotomía mayor para retirar el coágulo y controlar la fuente de sangrado. En casos graves con edema cerebral importante puede ser necesaria una craniectomía descompresiva (dejar el hueso fuera temporalmente para dar espacio al cerebro edematizado).</p>
 
@@ -233,66 +271,13 @@
               <li>Seguimiento con tomografía de control a las 4-6 semanas</li>
               <li>Revisión de anticoagulantes y factores de riesgo para evitar recurrencias</li>
             </ul>
+      </div>
 
-          </article>
+    </article>
 
-          <aside class="content-aside">
-            <div class="sidebar-card sidebar-card--cta">
-              <p class="sidebar-card-tag">Urgencia y consulta programada</p>
-              <h3 class="sidebar-card-title">¿Le detectaron un hematoma subdural?</h3>
-              <p class="sidebar-card-desc">El drenaje oportuno es crucial. Llámame si necesitas evaluación urgente o si quieres entender el tratamiento y tiempos de recuperación.</p>
-              <a href="tel:4423679614" class="btn btn-warm btn-full">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                442 367-9614
-              </a>
-              <a href="https://wa.me/524423679614?text=Hola%2C%20a%20un%20familiar%20le%20detectaron%20un%20hematoma%20subdural%20y%20quisiera%20informaci%C3%B3n." class="btn btn-outline btn-full" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Consultorios</h4>
-              <div class="sidebar-info-item">
-                <strong>Hospital H+ Querétaro</strong>
-                <span>Priv. Ignacio Zaragoza 16A, Torre 1, Cons. 1201, Col. Centro</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Instituto Newrospine</strong>
-                <span>Hacienda Vegil 102, Cons. 107</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Horario</strong>
-                <span>Lun–Vie 9–19 h · Sáb 9–14 h</span>
-              </div>
-              <div class="sidebar-info-item">
-                <strong>Seguro</strong>
-                <span>Inbursa · Pago particular</span>
-              </div>
-            </div>
-
-            <div class="sidebar-card">
-              <h4 class="sidebar-info-title">Cirugía cerebral — otras condiciones</h4>
-              <ul class="sidebar-links">
-                <li><a href="../tumores-cerebrales/">Tumores cerebrales</a></li>
-                <li><a href="../aneurisma-cerebral/">Aneurisma cerebral</a></li>
-                <li><a href="../traumatismo-craneoencefalico/">Traumatismo craneoencefálico</a></li>
-                <li><a href="../">Ver cirugía cerebral</a></li>
-              </ul>
-            </div>
-          </aside>
-
-        </div>
-
-        <div class="img-showcase">
-          <div class="img-showcase__grid">
-            <div>
-              <span class="section-tag">Qué pasa por dentro</span>
-              <h2>Sangre que comprime el cerebro</h2>
-              <p>En el hematoma subdural, la sangre se acumula entre el cerebro y sus cubiertas y lo desplaza, formando la típica media luna. Según el tamaño y los síntomas, se resuelve drenándolo a través de pequeños orificios en el cráneo.</p>
-            </div>
-            <figure style="margin:0;">
-              <img src="../../img/hematoma-subdural-cerebro-queretaro.webp" alt="Diagrama de hematoma subdural en forma de media luna — Dr. Carlos Mendoza, Querétaro" width="1280" height="720" loading="lazy" decoding="async">
-            </figure>
-          </div>
-        </div>
+    <!-- FAQ (intacto) -->
+    <section class="content-section">
+      <div class="container">
 
         <div class="faq-section reveal">
           <h2 class="section-title-center">Preguntas frecuentes sobre hematoma subdural</h2>

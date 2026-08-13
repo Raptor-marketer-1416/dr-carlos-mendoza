@@ -3295,3 +3295,31 @@ figure.ed-split__media { margin: 0; }
 }
 /* Padding de sección usado en contacto */
 .section-padding { padding: var(--space-lg) 0; }
+
+/* ================================================
+   PLACEHOLDER DESTACADO — FOTO DEL DOCTOR (para Mariana)
+   Marco naranja llamativo para que sea imposible no verlo.
+   ================================================ */
+.img-ph--doctor {
+  border: 3px dashed var(--color-warm);
+  background:
+    repeating-linear-gradient(45deg, rgba(244,162,97,0.08) 0 14px, transparent 14px 28px),
+    #FFF7EF;
+  min-height: 340px;
+  gap: 0.75rem;
+}
+.img-ph--doctor .img-ph__icon { color: var(--color-warm-dark); width: 52px; height: 52px; opacity: 1; }
+.img-ph--doctor .img-ph__label {
+  font-size: var(--text-base);
+  color: var(--color-warm-dark);
+  background: var(--color-warm);
+  color: #4a2c0f;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+}
+.img-ph--doctor .img-ph__desc { color: var(--color-text); font-size: var(--text-sm); }
+.img-ph--doctor .img-ph__desc strong { color: var(--color-warm-dark); }
+
+/* Sección "Conoce a tu neurocirujano" (reusa el grid del showcase) */
+.doctor-cta-block { background: var(--color-bg-alt); }
+.doctor-cta-block .btn { margin-top: 1.25rem; }

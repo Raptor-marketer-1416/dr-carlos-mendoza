@@ -231,7 +231,7 @@ function initConversionButtons() {
     window.dataLayer.push({ 'event': 'user_data_capture', 'user_data': { 'address': { 'first_name': name } } });
 
     const message = `Hola Dr. Carlos Mendoza, soy ${name}. Me interesa: ${service}.`;
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=${CONFIG.whatsapp}&text=${encodeURIComponent(message)}`, '_blank');
     closeWaModal();
     waForm.reset();
   });

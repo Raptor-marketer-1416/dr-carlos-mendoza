@@ -15,16 +15,21 @@
   <title>Contacto — Dr. Carlos Mendoza | Neurocirujano Querétaro</title>
   <meta name="description" content="Agenda tu consulta con el Dr. Carlos Mendoza, neurocirujano especialista en columna en Querétaro. Hospital H+ y consultorio Newrospine. Tel: (442) 367-9614.">
   <link rel="canonical" href="https://neurocirujanoqueretaro.com/contacto/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=30">
+<link rel="preload" as="font" type="font/woff2" href="../fonts/outfit-normal-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/dm-sans-normal-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css?v=e0ae2d9a">
   <link rel="icon" href="../img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Contacto — Dr. Carlos Mendoza | Neurocirujano Querétaro">
   <meta property="og:description" content="Agenda tu consulta. Especialista en columna vertebral y neurocirugía mínimamente invasiva en Querétaro.">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://neurocirujanoqueretaro.com/img/og/contacto.webp">
+  <meta property="og:image" content="https://neurocirujanoqueretaro.com/img/og/contacto.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Agenda tu consulta con el Dr. Carlos Mendoza en Querétaro">
   <meta property="og:url" content="https://neurocirujanoqueretaro.com/contacto/">
   <meta property="og:locale" content="es_MX">
 
@@ -39,20 +44,39 @@
         "url": "https://neurocirujanoqueretaro.com/contacto/",
         "name": "Contacto — Dr. Carlos Mendoza | Neurocirujano Querétaro",
         "description": "Agenda tu consulta con el Dr. Carlos Mendoza, neurocirujano especialista en columna vertebral en Querétaro.",
-        "isPartOf": { "@id": "https://neurocirujanoqueretaro.com/#website" },
-        "about": { "@id": "https://neurocirujanoqueretaro.com/#physician" },
-        "breadcrumb": { "@id": "https://neurocirujanoqueretaro.com/contacto/#breadcrumb" }
+        "isPartOf": {
+          "@id": "https://neurocirujanoqueretaro.com/#website"
+        },
+        "about": {
+          "@id": "https://neurocirujanoqueretaro.com/#physician"
+        },
+        "breadcrumb": {
+          "@id": "https://neurocirujanoqueretaro.com/contacto/#breadcrumb"
+        }
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://neurocirujanoqueretaro.com/contacto/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://neurocirujanoqueretaro.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Contacto", "item": "https://neurocirujanoqueretaro.com/contacto/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://neurocirujanoqueretaro.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contacto",
+            "item": "https://neurocirujanoqueretaro.com/contacto/"
+          }
         ]
       },
       {
-        "@type": ["Physician", "LocalBusiness"],
+        "@type": [
+          "Physician",
+          "LocalBusiness"
+        ],
         "@id": "https://neurocirujanoqueretaro.com/#physician",
         "name": "Dr. Carlos Mendoza | Neurocirujano",
         "telephone": "+52-442-367-9614",
@@ -71,8 +95,26 @@
           "longitude": -100.4099596
         },
         "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "14:00" }
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "14:00"
+          }
         ],
         "url": "https://neurocirujanoqueretaro.com/",
         "sameAs": [
@@ -83,6 +125,16 @@
           "https://maps.app.goo.gl/d8PUZUyhGdNTPFSx6",
           "https://wa.me/524423679614"
         ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://neurocirujanoqueretaro.com/#website",
+        "url": "https://neurocirujanoqueretaro.com",
+        "name": "Dr. Carlos Mendoza | Neurocirujano Querétaro",
+        "publisher": {
+          "@id": "https://neurocirujanoqueretaro.com/#physician"
+        },
+        "inLanguage": "es-MX"
       }
     ]
   }
@@ -231,7 +283,7 @@
             <!-- WhatsApp directo -->
             <div class="whatsapp-alt">
               <p>¿Prefieres escribir directamente?</p>
-              <a href="https://wa.me/524423679614?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20con%20el%20Dr.%20Carlos%20Mendoza." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send?phone=524423679614&amp;text=Hola%2C%20quisiera%20agendar%20una%20consulta%20con%20el%20Dr.%20Carlos%20Mendoza." class="btn btn-whatsapp open-wa-modal" target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 WhatsApp: (442) 367-9614
               </a>
@@ -428,7 +480,7 @@
           <a href="../aviso-de-privacidad/">Aviso de privacidad</a>
           <a href="../terminos-y-condiciones/">Términos y condiciones</a>
         </div>
-        <p class="footer-copy">Sitio web creado por <a href="https://raptormarketer.com" target="_blank" rel="noopener noreferrer" class="footer-raptor-link">Raptor Marketer</a></p>
+        <p class="footer-copy">Sitio web desarrollado por <a href="https://raptormarketer.com" target="_blank" rel="noopener noreferrer" class="footer-raptor-link">Raptor Marketer</a></p>
       </div>
     </div>
   </footer>
@@ -499,7 +551,7 @@
   </div>
 </div>
 
-  <script src="../js/main.js?v=18" defer></script>
+  <script src="../js/main.js?v=9752f72b" defer></script>
 
   <!-- Form handler -->
   <script>
@@ -524,7 +576,7 @@
 
           // Construir mensaje WhatsApp
           const mensaje = document.getElementById('mensaje').value.trim();
-          const wa = `https://wa.me/524423679614?text=${encodeURIComponent(
+          const wa = `https://api.whatsapp.com/send?phone=524423679614&text=${encodeURIComponent(
             `Hola Dr. Carlos Mendoza, me llamo ${nombre}.\n` +
             `Teléfono: ${telefono}\n` +
             `Motivo: ${motivo}\n` +

@@ -485,16 +485,30 @@
          HERO
          ============================== -->
     <section class="hero hero--video" aria-labelledby="hero-heading">
-      <video class="hero-video hero-video--desktop" autoplay muted loop playsinline preload="auto"
+      <!-- El src se asigna por JS segun el breakpoint: con autoplay el navegador
+           descargaba LOS DOS videos (4.2 MB) aunque el CSS ocultara uno. El poster
+           pinta de inmediato y hace de reserva si el JS no corre. -->
+      <video class="hero-video hero-video--desktop" muted loop playsinline preload="none"
              poster="./img/hero-poster-neurocirujano-queretaro.jpg?v=2"
-             aria-hidden="true">
-        <source src="./video/neurocirujano-queretaro-dr-carlos-mendoza.mp4?v=2" type="video/mp4">
-      </video>
-      <video class="hero-video hero-video--mobile" autoplay muted loop playsinline preload="auto"
+             data-src="./video/neurocirujano-queretaro-dr-carlos-mendoza.mp4?v=2"
+             aria-hidden="true"></video>
+      <video class="hero-video hero-video--mobile" muted loop playsinline preload="none"
              poster="./img/hero-poster-neurocirujano-queretaro-vertical.jpg?v=2"
-             aria-hidden="true">
-        <source src="./video/neurocirujano-queretaro-dr-carlos-mendoza-vertical.mp4?v=2" type="video/mp4">
-      </video>
+             data-src="./video/neurocirujano-queretaro-dr-carlos-mendoza-vertical.mp4?v=2"
+             aria-hidden="true"></video>
+      <script>
+        (function () {
+          var movil = window.matchMedia('(max-width: 768px)').matches;
+          var v = document.querySelector(movil ? '.hero-video--mobile' : '.hero-video--desktop');
+          if (!v || !v.dataset.src) return;
+          var s = document.createElement('source');
+          s.src = v.dataset.src; s.type = 'video/mp4';
+          v.appendChild(s);
+          v.load();
+          var p = v.play();
+          if (p && p.catch) p.catch(function () { /* sin autoplay: queda el poster */ });
+        })();
+      </script>
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="container hero-grid">

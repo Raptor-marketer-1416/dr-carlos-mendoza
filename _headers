@@ -19,3 +19,14 @@
 
 /video/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Markdown para agentes de IA
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/
+  Link: </index.md>; rel="alternate"; type="text/markdown"
+
+/*.html
+  Vary: Accept

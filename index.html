@@ -485,28 +485,36 @@
          HERO
          ============================== -->
     <section class="hero hero--video" aria-labelledby="hero-heading">
-      <!-- El src se asigna por JS segun el breakpoint: con autoplay el navegador
-           descargaba LOS DOS videos (4.2 MB) aunque el CSS ocultara uno. El poster
-           pinta de inmediato y hace de reserva si el JS no corre. -->
-      <video class="hero-video hero-video--desktop" muted loop playsinline preload="none"
-             poster="./img/hero-poster-neurocirujano-queretaro.jpg?v=2"
+      <!-- Patron de la casa (multimedia-web): los DOS <video> van en el HTML con
+           autoplay + muted + playsinline + webkit-playsinline, porque iOS Safari solo
+           autoplaya de forma fiable el video presente al parsear (inyectarlo por JS lo
+           deja congelado en iPhone; Playwright/Chromium dan falso positivo). El script
+           elimina el que no toca al dispositivo -> solo se descarga uno. -->
+      <video class="hero-video hero-video--desktop" autoplay muted loop playsinline webkit-playsinline
+             preload="auto" poster="./img/hero-poster-neurocirujano-queretaro.jpg?v=2"
              data-src="./video/neurocirujano-queretaro-dr-carlos-mendoza.mp4?v=2"
              aria-hidden="true"></video>
-      <video class="hero-video hero-video--mobile" muted loop playsinline preload="none"
-             poster="./img/hero-poster-neurocirujano-queretaro-vertical.jpg?v=2"
-             data-src="./video/neurocirujano-queretaro-dr-carlos-mendoza-vertical.mp4?v=2"
+      <video class="hero-video hero-video--mobile" autoplay muted loop playsinline webkit-playsinline
+             preload="auto" poster="./img/hero-poster-neurocirujano-queretaro-vertical.jpg?v=2"
+             data-src="./video/neurocirujano-queretaro-dr-carlos-mendoza-vertical.mp4?v=3"
              aria-hidden="true"></video>
       <script>
         (function () {
           var movil = window.matchMedia('(max-width: 768px)').matches;
-          var v = document.querySelector(movil ? '.hero-video--mobile' : '.hero-video--desktop');
+          var sobra = document.querySelector(movil ? '.hero-video--desktop' : '.hero-video--mobile');
+          if (sobra && sobra.parentNode) sobra.parentNode.removeChild(sobra);
+          var v = document.querySelector('.hero-video');
           if (!v || !v.dataset.src) return;
-          var s = document.createElement('source');
-          s.src = v.dataset.src; s.type = 'video/mp4';
-          v.appendChild(s);
-          v.load();
-          var p = v.play();
-          if (p && p.catch) p.catch(function () { /* sin autoplay: queda el poster */ });
+          v.muted = true; v.defaultMuted = true; v.setAttribute('muted', '');
+          v.src = v.dataset.src;
+          // Defensas de autoplay (Tarimas Garo): Modo Bajo Consumo / Ahorro de Datos
+          var evs = ['touchstart', 'pointerdown', 'click', 'scroll', 'keydown'];
+          function intenta() { var r = v.play(); if (r && r.catch) r.catch(function () {}); }
+          function limpia() { evs.forEach(function (e) { window.removeEventListener(e, intenta); }); }
+          v.addEventListener('playing', limpia, { once: true });
+          evs.forEach(function (e) { window.addEventListener(e, intenta, { passive: true }); });
+          document.addEventListener('visibilitychange', function () { if (!document.hidden) intenta(); });
+          intenta();
         })();
       </script>
       <div class="hero-overlay" aria-hidden="true"></div>

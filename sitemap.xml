@@ -4,7 +4,7 @@
   <!-- HOME -->
   <url>
     <loc>https://neurocirujanoqueretaro.com/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- SILO COLUMNA — Pilar -->
   <url>
     <loc>https://neurocirujanoqueretaro.com/columna/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -41,7 +41,7 @@
 
   <url>
     <loc>https://neurocirujanoqueretaro.com/columna/estenosis-lumbar/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -91,7 +91,7 @@
   <!-- SILO CEREBRO — Pilar -->
   <url>
     <loc>https://neurocirujanoqueretaro.com/cerebro/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -143,7 +143,7 @@
 
   <url>
     <loc>https://neurocirujanoqueretaro.com/blog/estenosis-lumbar-dolor-al-caminar/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -151,9 +151,17 @@
   <!-- CONTACTO -->
   <url>
     <loc>https://neurocirujanoqueretaro.com/contacto/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- GUIA: neurologo o neurocirujano (2026-10-02) -->
+  <url>
+    <loc>https://neurocirujanoqueretaro.com/neurologo-o-neurocirujano/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- LEGAL: aviso-de-privacidad y terminos-y-condiciones NO van en el sitemap.

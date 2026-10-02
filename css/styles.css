@@ -3369,3 +3369,17 @@ figure.ed-split__media { margin: 0; }
 /* Sección "Conoce a tu neurocirujano" (reusa el grid del showcase) */
 .doctor-cta-block { background: var(--color-bg-alt); }
 .doctor-cta-block .btn { margin-top: 1.25rem; }
+
+/* ================================================
+   TABLAS EDITORIALES (.ed-table) — comparativas y guias por sintoma
+   Desplazamiento horizontal propio en movil: la pagina nunca se desborda.
+   ================================================ */
+.ed-table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; -webkit-overflow-scrolling: touch; }
+.ed-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); line-height: 1.55; }
+.ed-table th, .ed-table td { padding: 0.8rem 0.9rem; border: 1px solid var(--color-border, #dfe5ea); text-align: left; vertical-align: top; }
+.ed-table thead th { background: var(--color-primary, #0D2137); color: #fff; font-family: var(--font-display); font-weight: 600; }
+.ed-table tbody th { background: #f4f7f9; color: var(--color-primary, #0D2137); font-weight: 600; }
+/* solo las tablas de 3+ columnas necesitan ancho minimo (y scroll propio en movil);
+   las de 2 columnas caben y asi la respuesta nunca queda fuera de pantalla */
+.ed-table--wide { min-width: 480px; }
+.ed-table tbody tr:nth-child(even) td { background: #fafbfc; }

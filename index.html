@@ -35,7 +35,7 @@
 
   <link rel="preload" as="font" type="font/woff2" href="fonts/outfit-normal-latin.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="fonts/dm-sans-normal-latin.woff2" crossorigin>
-<link rel="stylesheet" href="./css/styles.css?v=05a5ea48">
+<link rel="stylesheet" href="./css/styles.css?v=987c476a">
   <link rel="icon" href="./img/favicon-dr-Carlos-Mendoza.webp" type="image/webp">
 
   <!-- Preload de recursos críticos (LCP) -->
@@ -870,9 +870,27 @@
         </div>
       </div>
       <!-- Carrusel de reseñas reales desde Google Maps (TrustIndex) — ancho completo, fondo azul #0D2137 para integrar con el widget -->
-      <div class="reviews-widget reveal">
-        <script defer async src='https://cdn.trustindex.io/loader.js?9bc4f05765758700e66655707e9'></script>
-      </div>
+      <!-- El loader de TrustIndex pesa ~360 ms de CPU en movil: se inyecta cuando la seccion
+           esta a 600 px de entrar en pantalla (sin IntersectionObserver, se carga directo). -->
+      <div class="reviews-widget reveal" data-ti-src="https://cdn.trustindex.io/loader.js?9bc4f05765758700e66655707e9"></div>
+      <script>
+        (function () {
+          var box = document.querySelector('.reviews-widget[data-ti-src]');
+          if (!box) return;
+          function carga() {
+            if (box.dataset.tiCargado) return;
+            box.dataset.tiCargado = '1';
+            var s = document.createElement('script');
+            s.src = box.dataset.tiSrc; s.async = true; s.defer = true;
+            box.appendChild(s);
+          }
+          if (!('IntersectionObserver' in window)) return carga();
+          var io = new IntersectionObserver(function (e) {
+            if (e[0].isIntersecting) { io.disconnect(); carga(); }
+          }, { rootMargin: '600px 0px' });
+          io.observe(box);
+        })();
+      </script>
     </section>
 
     <!-- ==============================
@@ -1188,6 +1206,6 @@
 </div>
 
 
-  <script src="./js/main.js?v=9752f72b" defer></script>
+  <script src="./js/main.js?v=2dec2f2b" defer></script>
 </body>
 </html>

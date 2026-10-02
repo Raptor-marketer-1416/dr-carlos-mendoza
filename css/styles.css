@@ -4,7 +4,6 @@
    styles.css — Sistema de diseño completo
    ================================================ */
 
-
 /* ================================================
    TIPOGRAFIAS AUTOALOJADAS (sin bloqueo de render)
    Outfit (titulos) + DM Sans (texto) · font-display:swap
@@ -2241,7 +2240,7 @@ h1, h2, h3, h4, h5 {
   align-items: start;
 }
 
-/* --- Formulario --- */
+/* --- Bloque para agendar (abre el modal de WhatsApp) --- */
 .contact-form-wrap {
   background: #fff;
   border-radius: var(--radius-lg);
@@ -2262,12 +2261,6 @@ h1, h2, h3, h4, h5 {
   margin-bottom: var(--space-md);
   font-size: var(--text-base);
   line-height: 1.65;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
 }
 
 .form-group {
@@ -2314,70 +2307,56 @@ h1, h2, h3, h4, h5 {
   min-height: 110px;
 }
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.form-check {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 0.65rem;
-}
-
-.form-check input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  accent-color: var(--color-accent);
-  cursor: pointer;
-}
-
-.form-check label {
-  font-family: var(--font-body);
+.contact-steps-title {
+  font-family: var(--font-display);
   font-size: var(--text-sm);
-  font-weight: 400;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+.contact-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-steps li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.contact-steps li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.contact-alt {
+  margin-top: 1rem;
+  font-size: var(--text-sm);
   color: var(--color-text-muted);
-  cursor: pointer;
+  text-align: center;
+}
+
+.contact-alt a {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 .btn-full {
   width: 100%;
   justify-content: center;
-}
-
-.form-success {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: rgba(0,194,168,0.1);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-md);
-  padding: 1.25rem;
-  color: var(--color-accent);
-  font-size: var(--text-base);
-  margin-top: 1rem;
-}
-
-.form-success svg {
-  flex-shrink: 0;
-}
-
-.whatsapp-alt {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: var(--space-md);
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border);
-}
-
-.whatsapp-alt p {
-  color: var(--color-text-muted);
-  font-size: var(--text-sm);
-  white-space: nowrap;
 }
 
 .btn-whatsapp {
@@ -2394,6 +2373,14 @@ h1, h2, h3, h4, h5 {
   text-decoration: none;
   transition: background var(--transition), transform var(--transition);
   white-space: nowrap;
+}
+
+/* El CTA principal de /contacto/: mas grande y sin desbordar en moviles angostos */
+.contact-form-wrap .btn-whatsapp {
+  white-space: normal;
+  text-align: center;
+  font-size: var(--text-base);
+  padding: 0.95rem 1.25rem;
 }
 
 .btn-whatsapp:hover {
@@ -2613,20 +2600,6 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 768px) {
   .contact-info {
     grid-template-columns: 1fr;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .whatsapp-alt {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .whatsapp-alt p {
-    white-space: normal;
   }
 
   .map-header h2 {
